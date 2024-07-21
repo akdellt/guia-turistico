@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --cor-fundo: #FFFFFF;
+    --cor-texto: #000000;
+    --cor-destaque: #C33424;
+    --cor-botao: #24247A;
+    --cor-hover: ;
+
+    --fonte-principal: "Roboto", sans-serif;
+}
+
+/* BODY -- CONFIGURAÇÕES GERAIS*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    color: var(--cor-texto);
+
+}
+
+/* HEADER -- CONFIGURAÇÕES GERAIS*/
+.cabecalho {
+    height: 40%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://www.viagenscinematograficas.com.br/wp-content/uploads/2022/03/Onde-Ficar-nos-Lencois-Maranhenses-Capa.jpg);
+    background-size: cover;
+}
+
+/* HEADER -- MENU*/
+.cabecalho-menu {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+}
+
+.menu-page, .menu-atual {
+    color: var(--cor-fundo);
+    text-decoration: none;
+}
+
+.menu-atual {
+    color: var(--cor-destaque);
+}
+
+/* HEADER -- LOGIN*/
+.menu-login {
+    padding: 0.5rem 0.7rem;
+    color: var(--cor-fundo);
+    text-decoration: none;
+    background-color: var(--cor-botao);
+    border: 0.1rem solid var(--cor-botao);
+    border-radius: 0.7rem;
+}
+
+/* HEADER -- ABA DE PESQUISA*/
+.cabecalho-pesquisa {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-fundo);
+    border: 0.1rem solid var(--cor-botao);
+    border-radius: 1rem;
+}
+
+.pesquisa-texto {
+    width: 100%;
+    padding: 1rem;
+    border: 0;
+    border-radius: 1rem 0 0 1rem;
+    font-size: 1rem;
+}
+
+.pesquisa-texto:focus {
+    outline: none;
+    color: var(--cor-destaque);
+    border: 0.1rem solid var(--cor-botao);
+    border-radius: 0.8rem 0 0 0.8rem;
+}
+
+.pesquisa-botao {
+    border: 0;
+    border-radius: 0 0.86rem 0.86rem 0;
+    width: 3rem;
+    background-color: var(--cor-botao);
+    color: #FFFFFF;
+}
+
+.pesquisa-botao:hover {
+    background-color: #3737c0;
+}
+
+
+
+/* CONTEÚDO -- INTRODUÇÃO*/
+.conteudo {
+    padding: 2rem 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* CONTEÚDO -- MAPA*/
+.mapa{
+    width: 50%;
+}
+.conteudo-mapa {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+}
+
+.mapa-destino {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.destino-atrativos {
+    display: flex;
+    gap: 1rem;
+}
+
+/* CONTEÚDO -- ATRAÇÕES*/
+.conteudo-atrativos {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+}
+
+.atrativos-bloco {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    background-color: var(--cor-botao);
+    color: #FFFFFF;
+    border: 0.1rem solid var(--cor-botao);
+
+}
