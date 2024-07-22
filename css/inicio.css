@@ -22,8 +22,9 @@ body {
     font-family: var(--fonte-principal);
     font-size: 1rem;
     color: var(--cor-texto);
-
 }
+
+
 
 /* HEADER -- CONFIGURAÇÕES GERAIS*/
 .cabecalho {
@@ -48,11 +49,13 @@ body {
 
 .menu-page, .menu-atual {
     color: var(--cor-fundo);
+    font-weight: bold;
     text-decoration: none;
 }
 
 .menu-atual {
     color: var(--cor-destaque);
+    border-bottom: 0.2rem solid var(--cor-destaque);
 }
 
 /* HEADER -- LOGIN*/
@@ -62,7 +65,7 @@ body {
     text-decoration: none;
     background-color: var(--cor-botao);
     border: 0.1rem solid var(--cor-botao);
-    border-radius: 0.7rem;
+    border-radius: 100px;
 }
 
 /* HEADER -- ABA DE PESQUISA*/
@@ -71,46 +74,52 @@ body {
     display: flex;
     justify-content: center;
     background-color: var(--cor-fundo);
-    border: 0.1rem solid var(--cor-botao);
-    border-radius: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.276);
+    border-radius: 28px;
+    overflow: hidden;
 }
 
 .pesquisa-texto {
     width: 100%;
     padding: 1rem;
-    border: 0;
-    border-radius: 1rem 0 0 1rem;
+    border: none;
     font-size: 1rem;
 }
 
 .pesquisa-texto:focus {
     outline: none;
     color: var(--cor-destaque);
-    border: 0.1rem solid var(--cor-botao);
-    border-radius: 0.8rem 0 0 0.8rem;
 }
 
 .pesquisa-botao {
-    border: 0;
-    border-radius: 0 0.86rem 0.86rem 0;
-    width: 3rem;
-    background-color: var(--cor-botao);
-    color: #FFFFFF;
+    border: none;
+    background-color: var(--cor-fundo);
+    cursor: pointer;
 }
 
-.pesquisa-botao:hover {
-    background-color: #3737c0;
+.fa {
+    box-sizing: border-box;
+    padding-right: 0.8rem;
+    color: var(--cor-botao);
+    text-align: center;
+    font-size: 1.2em;
 }
 
 
 
 /* CONTEÚDO -- INTRODUÇÃO*/
 .conteudo {
-    padding: 2rem 8rem;
+    margin: 4rem 8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+}
+
+.bloco-titulo {
+    width: 100%;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.3rem solid var(--cor-destaque);
 }
 
 /* CONTEÚDO -- MAPA*/
@@ -138,20 +147,62 @@ body {
     gap: 1rem;
 }
 
+.atrativos-icon img{
+    width: 65%;
+    height: auto;
+}
+
 /* CONTEÚDO -- ATRAÇÕES*/
 .conteudo-atrativos {
-    padding-bottom: 2rem;
+    padding: 2rem 0;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
-    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .atrativos-bloco {
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-    padding: 3rem;
+    align-items: center;
     background-color: var(--cor-botao);
+    border-radius: 28px;
+    font-size: 0.9rem;
     color: #FFFFFF;
-    border: 0.1rem solid var(--cor-botao);
+    text-decoration: none;
+}
 
+.atrativos-bloco img {
+    height: 60%;
+    width: auto;
+}
+
+
+
+/* CONTEÚDO -- PRINCIPAIS DESTINOS*/
+.conteudo-destino {
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.destino-previa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-destaque);
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: auto;
+    gap: 1rem;
+}
+
+.destino-previa img {
+    width: 100%;
+    height: auto;
 }
