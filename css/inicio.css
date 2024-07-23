@@ -187,7 +187,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .destino-previa {
@@ -210,3 +210,21 @@ body {
 
 
 /* DESTINOS -- CONTEÚDO*/
+.destino-bloco {
+    padding: 0.8rem;
+    background-color: #C33424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.bloco-etiqueta {
+    display: flex;
+    gap: 2rem;
+}
+
+.destino-imagem {
+    width: 100%;
+    height: auto;
+}
