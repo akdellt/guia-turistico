@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaraTour</title>
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="cabecalho">
+
+        <nav class="cabecalho-menu">
+            <a class="menu-page" href="index.html"> <img src="assets/" alt="bandeira do Maranhão"></a>
+            <a class="menu-atual" href="destinos.html"> DESTINOS </a>
+            <a class="menu-page" href="atracoes.html"> ATRAÇÕES </a>
+            <a class="menu-page" href="viagens.html"> VIAGENS </a>
+            <a class="menu-login" href="login.html"> ENTRAR </a>
+        </nav>
+        <div class="cabecalho-pesquisa">
+            <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
+            <button class="pesquisa-botao"> <i class="fa fa-search"></i> </button>
+        </div>
+    </header>
+
+    <main class="conteudo">
+        <form action="mudar.html">
+            <div>
+                <div><label>Email</label></div>
+                <input type="email" name="email" id="email" onchange="validateFields()" placeholder="seu@email.com">
+            </div>
+
+            <div>
+                <div><label>Senha</label></div>
+                    <input type="password" name="password" onchange="validateFields()" id="password" placeholder="senha">
+            </div>
+
+            <div>
+                <button type="button" id="recover-password-button" disabled="true">Recuperar senha</button>
+            </div>
+
+            <div>
+                <button type="button" id="login-button" disabled="true">Entrar</button>
+                <button type="button">Registrar</button>
+            </div>
+
+        </form>
+    </main>
+
+<footer class="rodape">
+
+</footer>
+</body>
+
+<script src="index.js"></script>
+
+</html>
