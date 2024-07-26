@@ -1,0 +1,48 @@
+input, button{
+    padding: 0.5rem;
+    width: -webkit-fill-available;
+}
+
+form {
+    width: 70%;
+}
+
+button {
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+button[disabled] {
+    opacity: 0.7;
+}
+
+.formulario-box {
+    margin-bottom: 0.5rem;
+}
+
+.recuperar {
+    background: transparent;
+    border: none;
+    color: black;
+}
+
+.login {
+    background: #24247A;
+    border: none;
+    color: #FFFFFF;
+}
+
+.registrar {
+    background: transparent;
+    color: #24247A;
+    border: 0.1rem solid #24247A;
+}
+
+.erro {
+    color: #C33424;
+    display: none;
+}

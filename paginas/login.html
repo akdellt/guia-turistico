@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MaraTour</title>
+    <link rel="stylesheet" href="../css/inicio.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+
+        <nav class="cabecalho-menu">
+            <a class="menu-page" href="../index.html"> <img src="../assets/" alt="bandeira do Maranhão"></a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <form>
+            <div class="formulario-box">
+                <div><label>Email</label></div>
+                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
+                <p class="erro" id="email-required-error">Email obrigatório</p>
+                <p class="erro" id="email-invalid-error">Email inválido</p>
+            </div>
+
+            <div class="formulario-box">
+                <div><label>Senha</label></div>
+                <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="senha">
+                <p class="erro" id="password-required-error">Senha obrigatória</p>
+            </div>
+
+            <div>
+                <button type="button" id="recover-password-button" class="recuperar" disabled="true">Recuperar senha</button>
+            </div>
+
+            <div>
+                <button type="button" id="login-button" class="login" disabled="true" onclick="login()">Entrar</button>
+                <button type="button" class="registrar" onclick="register()">Registrar</button>
+            </div>
+
+        </form>
+    </main>
+
+<footer class="rodape">
+
+</footer>
+</body>
+
+<script src="../index.js"></script>
+<script src="../validations.js"></script>
+
+</html>
