@@ -1,3 +1,4 @@
+
 input, button{
     padding: 0.5rem;
     width: -webkit-fill-available;
@@ -45,4 +46,11 @@ button[disabled] {
 .erro {
     color: #C33424;
     display: none;
+}
+
+.loading {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100vh;
+    height: 100vh;
 }

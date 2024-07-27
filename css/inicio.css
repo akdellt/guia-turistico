@@ -53,6 +53,10 @@ body {
     text-decoration: none;
 }
 
+.menu-page img {
+    width: 4rem;
+}
+
 .menu-atual {
     color: var(--cor-destaque);
     border-bottom: 0.2rem solid var(--cor-destaque);
@@ -227,4 +231,10 @@ body {
 .destino-imagem {
     width: 100%;
     height: auto;
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

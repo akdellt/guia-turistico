@@ -45,7 +45,22 @@ function togglePasswordError() {
 }
 
 function login() {
-    window.location.href = "../index.html";
+    showLoading();
+
+    firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response => {
+        hideLoading();
+        window.location.href = "../index.html";
+    }).catch(error => {
+        hideLoading();
+        alert(getErrorMessage(error));
+    })
+}
+
+function getErrorMessage(error) {
+    if(error.code === "auth/invalid-credential") {
+        return "Usuário não encontrado";
+    }
+    return error.message;
 }
 
 function register() {

@@ -13,7 +13,7 @@
     <header class="cabecalho">
 
         <nav class="cabecalho-menu">
-            <a class="menu-page" href="../index.html"> <img src="../assets/" alt="bandeira do Maranhão"></a>
+            <a class="menu-page" href="../index.html"> <img src="../assets/icons/maranhao.svg" alt="bandeira do Maranhão"></a>
         </nav>
     </header>
 
@@ -43,13 +43,22 @@
 
         </form>
     </main>
-
-<footer class="rodape">
-
-</footer>
 </body>
 
 <script src="../index.js"></script>
 <script src="../validations.js"></script>
-
+<script src="../carregamento.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth-compat.js"></script>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyDEjdLQiq5okUKh9UFGHJotuo821ppzYHs",
+        authDomain: "guia-turistico-4a591.firebaseapp.com",
+        projectId: "guia-turistico-4a591",
+        storageBucket: "guia-turistico-4a591.appspot.com",
+        messagingSenderId: "418560178699",
+        appId: "1:418560178699:web:06b56fd4006586c3bc650e"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
 </html>
