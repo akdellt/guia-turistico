@@ -5,33 +5,54 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MaraTour</title>
-        <link rel="stylesheet" href="css/inicio.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="./css/home.css">
     </head>
 
     <body>
         <header class="cabecalho">
+            <nav class="cabecalho-menu centralizar">
+                <a class="menu-iniciar centralizar" href="./index.html"><img src="./assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
 
-            <nav class="cabecalho-menu">
-                <a class="menu-page" href="./index.html"> <img src="./assets/icons/maranhao.svg" alt="bandeira do Maranhão"></a>
-                <a class="menu-atual" href="./paginas/destinos.html"> DESTINOS </a>
-                <a class="menu-page" href="./paginas/atracoes.html"> ATRAÇÕES </a>
-                <a class="menu-page" href="./paginas/viagens.html"> VIAGENS </a>
-                <a class="menu-login" href="./paginas/login.html"> ENTRAR </a>
+                <ul class="menu-navegacao">
+                    <li><a class="menu-page" href="./paginas/destinos/destinos.html">DESTINOS</a></li>
+                    <li><a class="menu-page" href="./paginas/atracoes.html">ATRAÇÕES</a></li>
+                    <li><a class="menu-page" href="./paginas/favoritos.html">FAVORITOS</a></li>
+                </ul>
+
+                <div class="menu-botoes centralizar">
+                    <a class="menu-botao centralizar"> <img src="./assets/icons/icon-pesquisa.svg"> BUSCAR </a>
+                    <a class="menu-botao centralizar"> <img src="./assets/icons/icon-perfil.svg"> ENTRAR </a>
+                </div>
             </nav>
-            <div class="cabecalho-pesquisa">
-                <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
-                <button class="pesquisa-botao"> <i class="fa fa-search"></i> </button>
-            </div>
         </header>
 
-        <main class="conteudo">
-            <h1 class="conteudo-titulo"> Conheça as maravilhas do Maranhão </h1>
-            <p class="conteudo-paragrafo"> Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Casamentiss faiz malandris se pirulitá. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. </p>
+        <div class="cabecalho-pesquisa centralizar">
+            <form action="">
+                <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
+                <button class="pesquisa-botao"> <img src="./assets/icons/icon-pesquisa.svg"> </button>
+                <!--FAZER JS PRA ESCONDER BARRA DEPOIS-->
+            </form>
 
-            <section class="conteudo-mapa">
+        </div>
+
+        <main>
+            <div class="imagens-cabecalho centralizar" >
+                <h2> FAZER DEPOIS ISSO AQUI </h2>
+                <!---->
+            </div>
+
+
+            <div class="conteudo-introducao centralizar">
+                <h1 class="conteudo-titulo"> Conheça as maravilhas do Maranhão </h1>
+
+                <p class="conteudo-paragrafo"> Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Casamentiss faiz malandris se pirulitá. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. </p>
+            </div>
+
+
+            <section class="conteudo-mapa centralizar">
                 <img class="mapa" src="./assets/mapa.jpg" alt="mapa do Maranhão">
-                <div class="mapa-destino">
+                <div class="mapa-destino centralizar">
                     <img class="destino-previa" src="./assets/destinos/cidade.png" alt="imagem do destino">
                     <h2 class="destino-titulo"> Destino escolhido </h2>
                     <div class="destino-atrativos">
@@ -45,21 +66,29 @@
                 </div>
             </section>
 
-            <h1 class="bloco-titulo"> ATRAÇÕES </h1>
-            <div class="conteudo-atrativos">
-                <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src=".assets/atracoes/icons/arquitetura-nc.svg"> ARQUITETURA </a>
-                <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/agua-nc.svg"> PRAIAS </a>
-                <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/festival-nc.svg"> CULTURA </a>
-                <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/comida-nc.svg"> CULINÁRIA </a>
-                <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/natureza-nc.svg"> NATUREZA </a>
+
+            <div>
+                <h1 class="bloco-titulo"> ATRAÇÕES </h1>
+                <div class="conteudo-atrativos">
+                    <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/arquitetura-nc.svg"> ARQUITETURA </a>
+                    <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/agua-nc.svg"> PRAIAS </a>
+                    <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/festival-nc.svg"> CULTURA </a>
+                    <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/comida-nc.svg"> CULINÁRIA </a>
+                    <a class="atrativos-bloco" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/natureza-nc.svg"> NATUREZA </a>
+                </div>
             </div>
 
-            <h1 class="bloco-titulo"> PRINCIPAIS DESTINOS </h1>
-            <div class="conteudo-destino">
-                <a class="destino-previa" href="./destinos-saoluis.html"> <img src="./assets/destinos/sao-luis.svg"> São Luís </a>
-                <a class="destino-previa" href="./destinos-alcantara.html"> <img src="./assets/destinos/alcantara.svg"> Alcântara </a>
-                <a class="destino-previa" href="./destinos-santoamaro.html"> <img src="./assets/destinos/santo-amaro.svg"> Barreirinhas </a>
+
+            <div>
+                <h1 class="bloco-titulo"> PRINCIPAIS DESTINOS </h1>
+                <div class="conteudo-destino">
+                    <a class="destino-previa" href="./destinos-saoluis.html"> <img src="./assets/destinos/sao-luis.svg"> São Luís </a>
+                    <a class="destino-previa" href="./destinos-alcantara.html"> <img src="./assets/destinos/alcantara.svg"> Alcântara </a>
+                    <a class="destino-previa" href="./destinos-santoamaro.html"> <img src="./assets/destinos/santo-amaro.svg"> Barreirinhas </a>
+                </div>
             </div>
+
+
         </main>
 
         <footer class="rodape">

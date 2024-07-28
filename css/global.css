@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --cor-fundo: #FFFFFF;
+    --cor-texto: #000000;
+    --cor-destaque: #C33424;
+    --cor-botao: #24247A;
+    --cor-hover: ;
+
+    --fonte-principal: "Roboto", sans-serif;
+}
+
+
+/* BODY -- CONFIGURAÇÕES GERAIS*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: auto;
+    box-sizing: border-box;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    color: var(--cor-texto);
+}
+
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* HEADER PRINCIPAL -- CONFIGURAÇÕES GERAIS*/
+.cabecalho {
+    height: 30px;
+    padding: 1rem;
+    background: white;
+    border-bottom: 0.1rem solid #C33424;
+}
+
+.cabecalho-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-navegacao {
+    display: flex;
+    gap: 3rem;
+}
+
+.menu-botoes {
+    border-left: 0.1rem solid black;
+    padding-left: 1rem;
+    gap: 1rem;
+}
+
+
+/* HEADER PRINCIPAL -- CONFIGURAÇÕES DO BOTÃO INICIAL*/
+.menu-iniciar {
+    gap: 1rem;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.menu-iniciar img {
+    width: 2rem;
+}
+
+
+/* HEADER PRINCIPAL -- CONFIGURAÇÕES DO MENU DE PÁGINAS*/
+.menu-page {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+
+.menu-page:hover {
+    color: #C33424;
+    border-bottom: 0.2rem solid #C33424;
+}
+
+
+/* HEADER PRINCIPAL -- CONFIGURAÇÕES DOS BOTÕES DO MENU*/
+.menu-botao {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.menu-botao:hover {
+    filter: invert(33%) sepia(24%) saturate(5588%) hue-rotate(344deg) brightness(78%) contrast(95%);}
+
+.menu-botao img {
+    width: 1.5rem;
+}
+
+
+
+/* DIV PESQUISA -- CONFIGURAÇÕES DA ABA DE PESQUISA*/
+.cabecalho-pesquisa {
+    background: #C33424;
+    padding: 1rem;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+
+.pesquisa-botao {
+    height: 100%;
+    width: auto;
+    padding: 0 0.5rem ;
+    position: absolute;
+    right: 0;
+
+    background: white;
+    border: none;
+    border-radius: 0 28px 28px 0;
+    cursor: pointer;
+}
+
+.pesquisa-texto {
+    width: -webkit-fill-available;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 28px;
+    font-size: 1rem;
+    overflow: hidden;
+}
+
+.pesquisa-texto:focus {
+    outline: 0.15rem solid #24247A;
+    color: var(--cor-destaque);
+}
+
+
+
+/* CONFIGURAÇÕES DE TAGS*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

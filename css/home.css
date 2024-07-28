@@ -1,0 +1,39 @@
+/* HEADER SECUNDÁRIA -- CONFIGURAÇÕES DA GALERIA*/
+.imagens-cabecalho {
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://www.viagenscinematograficas.com.br/wp-content/uploads/2022/03/Onde-Ficar-nos-Lencois-Maranhenses-Capa.jpg);
+    background-size: cover;
+    margin-bottom: 4rem;
+}
+
+
+
+/* MAIN CONTEÚDO -- CONFIGURAÇÕES DO CORPO DA PÁGINA*/
+/* INTRODUÇÃO*/
+.conteudo-introducao {
+    flex-direction: column;
+    margin: 0 8rem 4rem 8rem;
+    gap: 2rem;
+}
+
+/* MAPA*/
+.conteudo-mapa {
+    margin: 0 8rem 4rem 8rem;
+    gap: 4rem;
+}
+
+.mapa {
+    width: 50%;
+}
+
+.mapa-destino {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.destino-atrativos img {
+    width: 3rem;
+}
