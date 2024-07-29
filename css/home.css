@@ -16,7 +16,7 @@
     gap: 2rem;
 }
 
-/* MAPA*/
+/* MAPA CONTEÚDO */
 .conteudo-mapa {
     margin: 0 8rem 4rem 8rem;
     gap: 4rem;
@@ -27,7 +27,7 @@
 }
 
 .mapa-destino {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     flex-direction: column;
     width: 50%;
     padding: 2rem;
@@ -36,4 +36,93 @@
 
 .destino-atrativos img {
     width: 3rem;
+}
+
+/* ATRAÇÕES CONTEÚDO */
+.conteudo-atrativos {
+    background: #C33424;
+    flex-direction: column;
+    margin: 0 8rem 4rem 8rem;
+    padding: 2rem;
+}
+
+.atrativos-bloco {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.atrativos-bloco a{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    text-decoration: none;
+}
+/*TEMRINAR DE EDITAR DEPOIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
+/*CONTEUDO DESTINOS - CONFIGURAÇÕES*/
+.conteudo-destino {
+    flex-direction: column;
+    margin: 0 8rem 4rem 8rem;
+    gap: 2rem;
+}
+
+/* DESTINOS GALERIA */
+.destino-galeria {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.galeria-quadro {
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    float: left;
+    width: 30%;
+    min-height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.galeria-quadro:hover {
+    border: 1px solid #777;
+}
+
+.galeria-quadro img {
+    width: 100%;
+    height: auto;
+}
+
+/* DESTINOS TEXTO */
+.desc {
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: fill-available;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #FFFFFF;
+    padding: 1rem;
+    text-align: center;
+}
+
+.nav-destino {
+    color: black;
+    letter-spacing: 0.2rem;
+    padding-bottom: 0.2rem;
+    cursor: pointer;
+}
+
+.nav-destino:hover {
+    color: #C33424;
+    border-bottom: 0.2rem solid #C33424;
+}
+
+.nav-destino:active {
+    color: #C33424;
+    font-weight: bold;
+    border-bottom: 0.2rem solid #C33424;
 }
