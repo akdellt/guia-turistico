@@ -8,6 +8,9 @@
 
 
 
+
+
+
 /* MAIN CONTEÚDO -- CONFIGURAÇÕES DO CORPO DA PÁGINA*/
 /* INTRODUÇÃO*/
 .conteudo-introducao {
@@ -61,6 +64,9 @@
 
 
 
+
+
+
 /*CONTEUDO DESTINOS - CONFIGURAÇÕES*/
 .conteudo-destino {
     flex-direction: column;
@@ -107,6 +113,7 @@
     background: #FFFFFF;
     padding: 1rem;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .nav-destino {

@@ -1,7 +1,13 @@
+main {
+    width: 100%;
+}
 
 input, button{
-    padding: 0.5rem;
+    padding: 0.8rem;
+    width: 100%;
+    width: -moz-available;
     width: -webkit-fill-available;
+    width: fill-available;
 }
 
 form {
@@ -10,7 +16,6 @@ form {
 
 button {
     cursor: pointer;
-    margin-bottom: 0.5rem;
 }
 
 button:active {
@@ -21,8 +26,18 @@ button[disabled] {
     opacity: 0.7;
 }
 
+
+
+
+.login-box {
+    width: auto;
+    flex-direction: column;
+    margin: 3rem 0 4rem;
+}
+
 .formulario-box {
-    margin-bottom: 0.5rem;
+    width: 30%;
+    margin-top: 1rem;
 }
 
 .recuperar {
@@ -31,9 +46,15 @@ button[disabled] {
     color: black;
 }
 
+.login-botoes {
+    width: 30%;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
 .login {
     background: #24247A;
-    border: none;
+    border: 0.1rem solid #24247A;
     color: #FFFFFF;
 }
 
@@ -50,7 +71,30 @@ button[disabled] {
 
 .loading {
     background: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    width: 100vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.loading-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #FFFFFF;
+    animation: loading-icon 2s infinite ease;
+}
+
+@keyframes loading-icon {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(180deg);}
+    50% {transform: rotate(180deg);}
+    75% {transform: rotate(360deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.margin {
+    margin-top: 2.5rem;
 }

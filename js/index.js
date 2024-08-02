@@ -49,7 +49,7 @@ function login() {
 
     firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response => {
         hideLoading();
-        window.location.href = "../index.html";
+        window.location.href = "../../index.html";
     }).catch(error => {
         hideLoading();
         alert(getErrorMessage(error));
@@ -64,7 +64,19 @@ function getErrorMessage(error) {
 }
 
 function register() {
-    window.location.href = "../paginas/registrar.html"
+    window.location.href = "../../paginas/usuario/registrar.html"
+}
+
+function recuperarSenha() {
+    showLoading();
+
+    firebase.auth().sendPasswordResetEmail(form.email().value).then(() =>{
+        hideLoading();
+        alert('Email enviado com sucesso, caso não tenha recebido, verifique o email inserido e tente novamente');
+    }).catch(error => {
+        hideLoading();
+        alert(getErrorMessage(error));
+    });
 }
 
 const form = {
