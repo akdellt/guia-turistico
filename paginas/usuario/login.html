@@ -10,59 +10,72 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <nav class="cabecalho-menu centralizar">
-            <a class="menu-iniciar centralizar" href="../../index.html"><img src="../../assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
+<div id="root"></div>
+<header class="cabecalho">
+    <nav class="cabecalho-menu centralizar">
+        <a class="menu-iniciar centralizar" href="../../index.html"><img src="../../assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
 
-            <div class="menu-botoes centralizar">
-                <a class="menu-botao centralizar"> <img src="../../assets/icons/icon-perfil.svg"> ENTRAR </a>
-            </div>
-        </nav>
-    </header>
+        <div class="menu-botoes centralizar">
+            <a class="menu-botao centralizar"> <img src="../../assets/icons/icon-perfil.svg"> ENTRAR </a>
+        </div>
+    </nav>
+</header>
 
-    <main>
-        <form class="login-box centralizar">
+<main>
+    <form id="login-form" class="login-box centralizar">
+        <div class="formulario-box">
+            <div><label>EMAIL</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@email.com">
+            <p class="erro" id="email-required-error">Email obrigatório</p>
+            <p class="erro" id="email-invalid-error">Email inválido</p>
+        </div>
 
-            <div class="formulario-box">
-                <div><label>EMAIL</label></div>
-                <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
-                <p class="erro" id="email-required-error">Email obrigatório</p>
-                <p class="erro" id="email-invalid-error">Email inválido</p>
-            </div>
+        <div class="formulario-box">
+            <div><label>SENHA</label></div>
+            <input type="password" name="senha" id="senha" placeholder="senha">
+            <p class="erro" id="password-required-error">Senha obrigatória</p>
+        </div>
 
-            <div class="formulario-box">
-                <div><label>SENHA</label></div>
-                <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="senha">
-                <p class="erro" id="password-required-error">Senha obrigatória</p>
-            </div>
+        <div>
+            <button type="button" id="recover-password-button" class="recuperar">Esqueceu a senha</button>
+        </div>
 
-            <div>
-                <button type="button" id="recover-password-button" onclick="recuperarSenha()" class="recuperar" disabled="true">Esqueceu a senha</button>
-            </div>
-
-            <div class="login-botoes centralizar ">
-                <button type="button" id="login-button" class="login" disabled="true" onclick="login()">ENTRAR</button>
-                <button type="button" class="registrar" onclick="register()">REGISTRAR</button>
-            </div>
-
-        </form>
-    </main>
+        <div class="login-botoes centralizar">
+            <button type="submit" id="login-button" class="login">ENTRAR</button>
+            <button type="button" class="registrar" id="registrar">REGISTRAR</button>
+        </div>
+    </form>
+</main>
 </body>
-
-<script src="../../js/index.js"></script>
-<script src="../../js/validations.js"></script>
+<script src="../../app.js"></script>
 <script src="../../js/carregamento.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth-compat.js"></script>
 <script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyDEjdLQiq5okUKh9UFGHJotuo821ppzYHs",
-        authDomain: "guia-turistico-4a591.firebaseapp.com",
-        projectId: "guia-turistico-4a591",
-        storageBucket: "guia-turistico-4a591.appspot.com",
-        messagingSenderId: "418560178699",
-        appId: "1:418560178699:web:06b56fd4006586c3bc650e"
-    };
-    firebase.initializeApp(firebaseConfig);
+    document.getElementById("login-form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        const response = await fetch("http://localhost:3000/auth/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({email, senha})
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+            // Salvando o token no localStorage
+            localStorage.setItem("token", data.token);
+            showLoading();
+            // Redirecionar para a página principal
+            window.location.href = "../../index.html";
+        } else {
+            alert(data.msg);
+        }
+    });
 </script>
+<script src="../../js/index.js"></script>
 </html>
