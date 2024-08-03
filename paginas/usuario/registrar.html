@@ -15,67 +15,51 @@
         <a class="menu-iniciar centralizar" href="../../index.html"><img src="../../assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
 
         <div class="menu-botoes centralizar">
-            <a class="menu-botao centralizar"> <img src="../../assets/icons/icon-perfil.svg"> ENTRAR </a>
+            <a class="menu-botao centralizar"> <img src="../../assets/icons/icon-perfil.svg"> REGISTRAR </a>
         </div>
     </nav>
 </header>
 
 <main>
-    <form class="login-box centralizar">
+    <form class="login-box centralizar" id="registrar-form">
         <div class="formulario-box">
             <div><label>NOME</label></div>
-            <input type="text" name="nome" onchange="onChangePassword()" id="nome" placeholder="nome">
-            <p class="erro" id="###"> Nome obrigatório</p>
+            <input type="text" name="nome" id="nome" placeholder="nome">
+            <p class="erro" id="nome-obrigatorio" style="display: none;">Nome obrigatório</p>
         </div>
 
         <div class="formulario-box">
             <div><label>SOBRENOME</label></div>
-            <input type="text" name="sobrenome" onchange="onChangePassword()" id="sobrenome" placeholder="nome">
-            <p class="erro" id="###"> Sobrenome obrigatório</p>
+            <input type="text" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+            <p class="erro" id="sobrenome-obrigatorio" style="display: none;">Sobrenome obrigatório</p>
         </div>
 
         <div class="formulario-box">
             <div><label>EMAIL</label></div>
-            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
-            <p class="erro" id="email-required-error">Email obrigatório</p>
-            <p class="erro" id="email-invalid-error">Email inválido</p>
+            <input type="email" name="email" id="email" placeholder="seu@email.com">
+            <p class="erro" id="email-obrigatorio" style="display: none;">Email obrigatório</p>
+            <p class="erro" id="email-invalido" style="display: none;">Email inválido</p>
         </div>
 
         <div class="formulario-box">
             <div><label>SENHA</label></div>
-            <input type="password" name="password" onchange="onChangePassword()" id="password" placeholder="senha">
-            <p class="erro" id="password-required-error">Senha obrigatória</p>
-            <p class="erro" id="password-min-error">Senha deve ter no mínimo 6 caracteres</p>
+            <input type="password" name="senha" id="senha" placeholder="senha">
+            <p class="erro" id="senha-obrigatoria" style="display: none;">Senha obrigatória</p>
+            <p class="erro" id="senha-minima" style="display: none;">Senha deve ter no mínimo 6 caracteres</p>
         </div>
 
         <div class="formulario-box">
             <div><label>CONFIRMAR SENHA</label></div>
-            <input type="password" name="password" onchange="onChangeConfirmPassword()" id="confirm-password" placeholder="senha">
-            <p class="erro" id="password-match-error">Senha e confirmar senha devem ser iguais</p>
+            <input type="password" name="confirmarSenha" id="confirmar-senha" placeholder="confirmar senha">
+            <p class="erro" id="senha-igual" style="display: none;">Senha e confirmar senha devem ser iguais</p>
         </div>
 
         <div class="login-botoes centralizar margin">
-            <button type="button" class="login" id="botao-registrar" onclick="registrar()" disabled="true">REGISTRAR</button>
+            <button type="submit" class="login" id="botao-registrar">REGISTRAR</button>
         </div>
-
     </form>
 </main>
-</body>
-
 <script src="../../js/validations.js"></script>
-<script src="../../js/carregamento.js"></script>
-<script src="../../js/registrar.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth-compat.js"></script>
-<script>
-    const firebaseConfig = {
-        apiKey: "AIzaSyDEjdLQiq5okUKh9UFGHJotuo821ppzYHs",
-        authDomain: "guia-turistico-4a591.firebaseapp.com",
-        projectId: "guia-turistico-4a591",
-        storageBucket: "guia-turistico-4a591.appspot.com",
-        messagingSenderId: "418560178699",
-        appId: "1:418560178699:web:06b56fd4006586c3bc650e"
-    };
-    firebase.initializeApp(firebaseConfig);
-</script>
+<script src="../../js/index.js"></script>
+</body>
 </html>
