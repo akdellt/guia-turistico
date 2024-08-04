@@ -1,75 +1,88 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MaraTour</title>
-        <link rel="stylesheet" href="../../css/inicio.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaraTour</title>
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/home.css">
+</head>
 
-    <body>
-    <header class="cabecalho">
-        <nav class="cabecalho-menu">
-            <a class="menu-page" href="../../index.html"> <img src="assets/" alt="bandeira do Maranhão"></a>
-            <a class="menu-atual" href="destinos.html"> DESTINOS </a>
-            <a class="menu-page" href="atracoes.html"> ATRAÇÕES </a>
-            <a class="menu-page" href="viagens.html"> VIAGENS </a>
-            <a class="menu-login" href="login.html"> ENTRAR </a>
-        </nav>
-        <div class="cabecalho-pesquisa">
-            <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
-            <button class="pesquisa-botao"> <i class="fa fa-search"></i> </button>
+<body>
+<header class="cabecalho">
+    <nav class="cabecalho-menu centralizar">
+        <a class="menu-iniciar centralizar" href="../../index.html"><img src="../../assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
+
+        <ul class="menu-navegacao">
+            <li><a class="menu-page" href="../../paginas/destinos/destinos.html">DESTINOS</a></li>
+            <li><a class="menu-page" href="#atracoes">ATRAÇÕES</a></li>
+            <li><a class="menu-page" href="../../paginas/favoritos.html">FAVORITOS</a></li>
+        </ul>
+
+        <div class="menu-botoes centralizar">
+            <a id="pesquisa-botao" class="menu-botao centralizar"> <img src="../../assets/icons/icon-pesquisa.svg"> BUSCAR </a>
+            <a class="menu-botao centralizar" href="../../paginas/usuario/login.html"> <img src="../../assets/icons/icon-perfil.svg"> ENTRAR </a>
         </div>
-    </header>
+    </nav>
+</header>
 
-    <main class="conteudo">
-        <h1 class="conteudo-titulo"> Destinos do Maranhão </h1>
-        <p class="conteudo-paragrafo"> Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Casamentiss faiz malandris se pirulitá. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. </p>
+<div id="pesquisa-aba" class="cabecalho-pesquisa centralizar esconder">
+    <form action="">
+        <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
+        <button class="pesquisa-botao"> <img src="../../assets/icons/icon-pesquisa.svg"> </button>
+    </form>
+</div>
 
-        <h2 class="bloco-titulo"> Grande Ilha </h2>
-        <section class="conteudo-destino">
-            <div class="destino-bloco">
-                <a class="destino-imagem" href="destinos-saoluis.html"> <img src="../../assets/destinos/sao-luis.svg"></a>
-                <a href="destinos-saoluis.html"> São Luís </a>
-                <div class="bloco-etiqueta">
-                    <p><img src="../assets/icons/aviao.svg"> Aeroporto </p>
-                    <p><img src="../assets/icons/seta-norte.svg"> Norte </p>
-                    <p><img src="../assets/icons/estrela.svg"> Upaon-Açu </p>
-                </div>
-                <p> sinopse da cidade </p>
+<main class="conteudo">
+    <h1 class="conteudo-titulo"> Destinos do Maranhão </h1>
+    <p class="conteudo-paragrafo"> Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Casamentiss faiz malandris se pirulitá. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. </p>
+
+    <h2 class="bloco-titulo"> Grande Ilha </h2>
+    <section class="conteudo-destino">
+        <div class="destino-bloco">
+            <a class="destino-imagem" href="destinos-saoluis.html"> <img src="../../assets/destinos/sao-luis.svg"></a>
+            <a href="destinos-saoluis.html"> São Luís </a>
+            <div class="bloco-etiqueta">
+                <p><img src="../assets/icons/aviao.svg"> Aeroporto </p>
+                <p><img src="../assets/icons/seta-norte.svg"> Norte </p>
+                <p><img src="../assets/icons/estrela.svg"> Upaon-Açu </p>
             </div>
+            <p> sinopse da cidade </p>
+        </div>
 
-            <div class="destino-bloco">
-                <a class="destino-imagem" href="destinos-saoluis.html"> <img src="../../assets/destinos/sao-luis.svg"></a>
-                <a href="destinos-saoluis.html"> São José de Ribamar </a>
-                <div class="bloco-etiqueta">
-                    <p><img src="../assets/icons/carro.svg"> Carro </p>
-                    <p><img src="../assets/icons/seta-norte.svg"> Norte </p>
-                    <p><img src="../assets/icons/estrela.svg"> Upaon-Açu </p>
-                </div>
-                <p> sinopse da cidade </p>
+        <div class="destino-bloco">
+            <a class="destino-imagem" href="destinos-saoluis.html"> <img src="../../assets/destinos/sao-luis.svg"></a>
+            <a href="destinos-saoluis.html"> São José de Ribamar </a>
+            <div class="bloco-etiqueta">
+                <p><img src="../assets/icons/carro.svg"> Carro </p>
+                <p><img src="../assets/icons/seta-norte.svg"> Norte </p>
+                <p><img src="../assets/icons/estrela.svg"> Upaon-Açu </p>
             </div>
+            <p> sinopse da cidade </p>
+        </div>
 
-            <div class="destino-bloco">
-                <a class="destino-imagem" href="destinos-saoluis.html"> <img src="assets/destinos/sao-luis.svg"></a>
-                <a href="destinos-saoluis.html"> Raposa </a>
-                <div class="bloco-etiqueta">
-                    <p><img src="../assets/icons/carro.svg"> Carro </p>
-                    <p><img src="../assets/icons/seta-norte.svg"> Norte </p>
-                    <p><img src="../assets/icons/estrela.svg"> Upaon-Açu </p>
-                </div>
-                <p> sinopse da cidade </p>
+        <div class="destino-bloco">
+            <a class="destino-imagem" href="destinos-saoluis.html"> <img src="assets/destinos/sao-luis.svg"></a>
+            <a href="destinos-saoluis.html"> Raposa </a>
+            <div class="bloco-etiqueta">
+                <p><img src="../../assets/icons/carro.svg"> Carro </p>
+                <p><img src="../../assets/icons/seta-norte.svg"> Norte </p>
+                <p><img src="../../assets/icons/estrela.svg"> Upaon-Açu </p>
             </div>
+            <p> sinopse da cidade </p>
+        </div>
 
-        </section>
+    </section>
 
 
-    </main>
+</main>
 
-    <footer class="rodape">
+<footer class="rodape">
 
-    </footer>
-    </body>
+</footer>
+<script src="../../js/dinamicos.js"></script>
+</body>
+
 </html>

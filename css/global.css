@@ -164,3 +164,7 @@ ul {
     background: #24247A;
     height: 10px;
 }
+
+.esconder {
+    display: none;
+}

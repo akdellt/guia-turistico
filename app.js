@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 //MODELOS
-const User = require("./api/modelos/User.js");
+const User = require("./api/modelos/User");
 
 // ROTA PÚBLICA
 app.get("/", (req, res) => {
@@ -147,4 +147,4 @@ mongoose
     .then(() => {
     app.listen(3000);
     console.log("Conectou ao banco");
-}).catch((err) => console.log(err))
+}).catch((err) => console.log(err));

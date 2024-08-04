@@ -1,0 +1,149 @@
+[
+  {
+    "id": "1",
+    "nome": "São Luís",
+    "regiao": "Norte",
+    "principal": true,
+    "titulo": "Conheça a cidade dos azulejos",
+    "descricao": "Capital do Maranhão e conhecida como Atenas Brasileira ou Ilha do Amor.",
+    "foto": "sao-luis.jpg",
+    "latitude": -2.5307,
+    "longitude": -44.3068,
+    "atrativos": [
+      {
+        "nome": "Centro Histórico",
+        "tipo": "Monumentos",
+        "descricao": "Patrimônio Histórico do estado.",
+        "dicas": "Evitar épocas festivas para visitar com menos pessoas.",
+        "foto": ""
+      },
+      {
+        "nome": "Peninsula",
+        "tipo": "Praias",
+        "descricao": "Peninsula ludovicense, com as praias mais visitadas da cidade, como Ponta D'Areia, Litorânea e Araçagy",
+        "dicas": "É possível visitar o Espigão e ver o por do sol.",
+        "foto": ""
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "nome": "Raposa",
+    "regiao": "Norte",
+    "principal": false,
+    "titulo": "Raposa e seus manguezais",
+    "descricao": "Cidade ligada à São Luís conhecida pelos mangues e passeios de barco.",
+    "foto": "raposa.jpg",
+    "latitude": -2.4255,
+    "longitude": -44.1075,
+    "atrativos": [
+      {
+        "nome": "Praia de carimã",
+        "tipo": "Praias",
+        "descricao": "Passeio de barco.",
+        "dicas": "Reserve com antecedência.",
+        "foto": ""
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "nome": "Alcântara",
+    "regiao": "Norte",
+    "principal": false,
+    "titulo": "Alcântara,a cidade parada no tempo",
+    "descricao": "bla blabla bla bla bla.",
+    "foto": "alcantara.jpg",
+    "latitude": -2.4039,
+    "longitude": -44.4153,
+    "atrativos": [
+      {
+        "nome": "Base espacial sla",
+        "tipo": "Monumentos",
+        "descricao": "Passeio pela cidade.",
+        "dicas": "nao sei.",
+        "foto": ""
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "nome": "Barreirinhas",
+    "regiao": "Nordeste",
+    "principal": true,
+    "titulo": "Paraíso no Maranhão",
+    "descricao": "Ponto mais conhecido do estado.",
+    "foto": "barreirinhas.jpg",
+    "latitude": -2.7587,
+    "longitude": -42.8231,
+    "atrativos": [
+      {
+        "nome": "Lençóis Maranhenses",
+        "tipo": "Praias",
+        "descricao": "Passeio pelas dunas.",
+        "dicas": "É possível ir para os lençóis por Barreirinhas ou Santo Amaro.",
+        "foto": ""
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "nome": "Morros",
+    "regiao": "Nordeste",
+    "principal": false,
+    "titulo": "A natureza de Morros",
+    "descricao": "Destino favorito dos maranhenses para as férias.",
+    "foto": "morros.jpg",
+    "latitude": -2.9438,
+    "longitude": -44.0383,
+    "atrativos": [
+      {
+        "nome": "sla",
+        "tipo": "Natureza",
+        "descricao": "Cachoeiras e lagoas.",
+        "dicas": "nao sei.",
+        "foto": ""
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "nome": "Carolina",
+    "regiao": "Sul",
+    "principal": true,
+    "titulo": "Carolina e a chapada",
+    "descricao": "Cidade sei a o que sei la o que la.",
+    "foto": "carolina.jpg",
+    "latitude": -7.335,
+    "longitude": -47.4694,
+    "atrativos": [
+      {
+        "nome": "Chapada das Mesas",
+        "tipo": "Natureza",
+        "descricao": "Formações naturais do estado.",
+        "dicas": "adicionar.",
+        "foto": ""
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "nome": "Riachão",
+    "regiao": "Sul",
+    "principal": false,
+    "titulo": "Riachão e suas cachoeiras",
+    "descricao": "hihihi hoho hahahahah huuuu.",
+    "foto": "riachao.jpg",
+    "latitude": -7.3581,
+    "longitude": -46.6161,
+    "atrativos": [
+      {
+        "nome": "Cachoeira de sei la o que",
+        "tipo": "Natureza",
+        "descricao": "Quedas d'água fenomenais.",
+        "dicas": "uauauauauauau.",
+        "foto": ""
+      }
+    ]
+  }
+]

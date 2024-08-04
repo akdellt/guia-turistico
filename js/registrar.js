@@ -1,102 +1,91 @@
-function onChangeEmail() {
-    const email = form.email().value;
-    form.emailRequiredError().style.display = email ? "none" : "block";
+//BOTAO REGISTRAR DIRECIONAR PARA TELA
+document.addEventListener("DOMContentLoaded", () => {
+    const registrar = document.getElementById('registrar');
+    registrar.addEventListener('click', () => {
+        window.location.href = '../../paginas/usuario/registrar.html';
+    });
 
-    form.emailInvalidError().style.display = email ? "none" : "block";
-}
+    //VARIAVEIS
+    const form = {
+        nome: () => document.getElementById('nome'),
+        nomeObrigatorio: () => document.getElementById('nome-obrigatorio'),
+        sobrenome: () => document.getElementById('sobrenome'),
+        sobrenomeObrigatorio: () => document.getElementById('sobrenome-obrigatorio'),
 
-function onChangePassword() {
-    const password = form.password().value;
-    form.passwordRequiredError().style.display = password ? "none" : "block";
+        email: () => document.getElementById('email'),
+        emailInvalido: () => document.getElementById('email-invalido'),
+        emailObrigatorio: () => document.getElementById('email-obrigatorio'),
 
-    form.passwordMinError().style.display = password.length >= 6 ? "none" : "block";
+        senha: () => document.getElementById('senha'),
+        senhaObrigatoria: () => document.getElementById('senha-obrigatoria'),
+        senhaMinima: () => document.getElementById('senha-minima'),
 
-    validatePasswordMatch();
-    RegisterButtonDisabled();
-}
+        confirmarSenha: () => document.getElementById('confirmar-senha'),
+        senhaIgual: () => document.getElementById('senha-igual'),
 
-function onChangeConfirmPassword() {
-    validatePasswordMatch();
-    RegisterButtonDisabled();
-}
+        formularioRegistro: () => document.getElementById('registrar-form')
+    };
 
-function validatePasswordMatch() {
-    const password = form.password().value;
-    const confirmPassword = form.confirmPassword().value;
+    form.formularioRegistro().addEventListener('submit', async function(event) {
+        event.preventDefault();
 
-    form.confirmMatchPassword().style.display = password === confirmPassword ? "none" : "block";
-}
+        // Clear previous error messages
+        document.querySelectorAll('.erro').forEach(e => e.style.display = 'none');
 
-function RegisterButtonDisabled() {
-    form.registerButton().disabled = isFormValid();
-}
+        // Capture form values
+        const nome = form.nome().value;
+        const sobrenome = form.sobrenome().value;
+        const email = form.email().value;
+        const senha = form.senha().value;
+        const confirmarSenha = form.confirmarSenha().value;
 
-function isFormValid() {
-    const email = form.email().value
+        // Validate form values
+        if (!nome) {
+            form.nomeObrigatorio().style.display = 'block';
+            return;
+        }
+        if (!sobrenome) {
+            form.sobrenomeObrigatorio().style.display = 'block';
+            return;
+        }
+        if (!email) {
+            form.emailObrigatorio().style.display = 'block';
+            return;
+        } else if (!validateEmail(email)) {
+            form.emailInvalido().style.display = 'block';
+            return;
+        }
+        if (!senha) {
+            form.senhaObrigatoria().style.display = 'block';
+            return;
+        } else if (senha.length < 6) {
+            form.senhaMinima().style.display = 'block';
+            return;
+        }
+        if (senha !== confirmarSenha) {
+            form.senhaIgual().style.display = 'block';
+            return;
+        }
 
-    if(!email || !validateEmail(email)){
-        return true
-    }
+        // Send form data to API
+        try {
+            const response = await fetch('http://localhost:3000/auth/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ nome, sobrenome, email, senha, confirmarSenha })
+            });
 
-    const confirmPassword = form.confirmPassword().value
-
-    if(!confirmPassword){
-        return true
-    }
-
-    const password = form.password().value
-
-    if(!password){
-        return true
-    }
-    if(form.emailInvalidError().style.display === 'block'){
-
-        return true
-    }
-    if(form.emailRequiredError().style.display === 'block'){
-        return true
-    }
-    if(form.confirmMatchPassword().style.display === 'block'){
-        return true
-    }
-    if(form.passwordMinError().style.display === 'block'){
-        return true
-    }
-    if(form.passwordRequiredError().style.display === 'block'){
-        return true
-    }
-    return false
-}
-
-function registrar() {
-    showLoading();
-    firebase.auth().createUserWithEmailAndPassword(
-        email, password
-    ).then (() => {
-        hideLoading();
-        window.location.href = "../index.html";
-    }).catch(error => {
-        hideLoading();
-        alert(getErrorMessage(error));
-    })
-}
-
-function getErrorMessage(error) {
-    if(error.code === "(auth/invalid-value-(email),-starting-an-object-on-a-scalar-field-invalid-value-(password),-starting-an-object-on-a-scalar-field") {
-        return "Email já em uso";
-    }
-    return error.message;
-}
-
-const form = {
-    confirmPassword: () => document.getElementById('confirm-password'),
-    confirmMatchPassword: () => document.getElementById('password-match-error'),
-    email: () => document.getElementById('email'),
-    emailInvalidError: () => document.getElementById('email-invalid-error'),
-    emailRequiredError: () => document.getElementById('email-required-error'),
-    loginButton: () => document.getElementById('login-button'),
-    password: () => document.getElementById('password'),
-    passwordRequiredError: () => document.getElementById('password-required-error'),
-    passwordMinError: () => document.getElementById('password-min-error'),
-    registerButton: () => document.getElementById('botao-registrar')
-}
+            const data = await response.json();
+            if (response.ok) {
+                showLoading();
+                window.location.href = '../../index.html';
+            } else {
+                alert(data.msg || 'Erro ao registrar usuário');
+            }
+        } catch (error) {
+            alert('Erro ao se conectar com a API');
+        }
+    });
+});

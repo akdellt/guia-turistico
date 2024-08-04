@@ -7,6 +7,15 @@
         <title>MaraTour</title>
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/home.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+        <style>
+            #map {
+                width: 100%;
+                height: 500px; /* Defina a altura desejada para o mapa */
+            }
+        </style>
+
     </head>
 
     <body>
@@ -21,19 +30,17 @@
                 </ul>
 
                 <div class="menu-botoes centralizar">
-                    <a class="menu-botao centralizar"> <img src="./assets/icons/icon-pesquisa.svg"> BUSCAR </a>
+                    <a id="pesquisa-botao" class="menu-botao centralizar"> <img src="./assets/icons/icon-pesquisa.svg"> BUSCAR </a>
                     <a class="menu-botao centralizar" href="./paginas/usuario/login.html"> <img src="./assets/icons/icon-perfil.svg"> ENTRAR </a>
                 </div>
             </nav>
         </header>
 
-        <div class="cabecalho-pesquisa centralizar">
+        <div id="pesquisa-aba" class="cabecalho-pesquisa centralizar esconder">
             <form action="">
                 <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
                 <button class="pesquisa-botao"> <img src="./assets/icons/icon-pesquisa.svg"> </button>
-                <!--FAZER JS PRA ESCONDER BARRA DEPOIS-->
             </form>
-
         </div>
 
         <main>
@@ -51,7 +58,7 @@
 
 
             <section class="conteudo-mapa centralizar">
-                <img class="mapa" src="./assets/mapa.jpg" alt="mapa do Maranhão">
+                <div id="map"></div>
                 <div class="mapa-destino centralizar">
                     <img class="destino-previa" src="./assets/destinos/cidade.png" alt="imagem do destino">
                     <h2 class="destino-titulo"> Destino escolhido </h2>
@@ -81,64 +88,17 @@
                 <h1 class="centralizar"> DESTINOS </h1>
 
                 <div class="destino-opcoes centralizar">
-                    <ul class="menu-navegacao centralizar">
-                        <li><span class="nav-destino" > Principais destinos </span></li>
-                        <li><span class="nav-destino">Norte</span></li>
-                        <li><span class="nav-destino">Nordeste</span></li>
-                        <li><span class="nav-destino">Sul</span></li>
+                    <ul id="regioes-lista" class="menu-navegacao centralizar">
+                        <li><span class="nav-destino" data-regiao="all">Todos</span></li>
+                        <li><span class="nav-destino" data-regiao="Principais destinos">Principais destinos</span></li>
+                        <li><span class="nav-destino" data-regiao="Norte">Norte</span></li>
+                        <li><span class="nav-destino" data-regiao="Nordeste">Nordeste</span></li>
+                        <li><span class="nav-destino" data-regiao="Sul">Sul</span></li>
                     </ul>
                 </div>
 
-                <div class="destino-galeria centralizar">
-                    <div class="galeria-quadro">
-                        <a href="#">
-                            <img src="./assets/destinos/sao-luis.jpg" alt="São Luís">
-                        </a>
-                        <p class="desc">São Luís</p>
-                    </div>
-
-                    <div class="galeria-quadro">
-                        <a href="#">
-                            <img src="./assets/destinos/raposa.jpg" alt="Raposa">
-                        </a>
-                        <p class="desc"> Raposa </p>
-                    </div>
-
-                    <div class="galeria-quadro">
-                        <a href="#">
-                            <img src="./assets/destinos/alcantara.jpg" alt="Alcântara">
-                        </a>
-                        <p class="desc"> Alcântara </p>
-                    </div>
-
-                    <div class="galeria-quadro">
-                        <a href="#">
-                            <img src="./assets/destinos/morros.jpg" alt="Morros">
-                        </a>
-                        <p class="desc"> Morros </p>
-                    </div>
-
-                    <div class="galeria-quadro">
-                        <a href="#">
-                            <img src="./assets/destinos/carolina.jpg" alt="Carolina">
-                        </a>
-                        <p class="desc"> Carolina </p>
-                    </div>
-
-                    <div class="galeria-quadro">
-                        <a href="#">
-                            <img src="./assets/destinos/riachao.jpg" alt="Riachão">
-                        </a>
-                        <p class="desc"> Riachão </p>
-                    </div>
-
-                    <div class="galeria-quadro">
-                        <a href="#">
-                            <img src="./assets/destinos/barreirinhas.jpg" alt="Barreirinhas">
-                        </a>
-                        <p class="desc"> Barreirinhas </p>
-                    </div>
-
+                <div id="destinos-galeria" class="destino-galeria centralizar">
+                    <!-- Destinos serão adicionados aqui dinamicamente -->
                 </div>
             </div>
 
@@ -147,6 +107,7 @@
         <footer class="rodape">
 
         </footer>
+    <script src="./js/dinamicos.js"></script>
     </body>
 
 </html>
