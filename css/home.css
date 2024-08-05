@@ -8,10 +8,6 @@
 }
 
 
-
-
-
-
 /* MAIN CONTEÚDO -- CONFIGURAÇÕES DO CORPO DA PÁGINA*/
 /* INTRODUÇÃO*/
 .conteudo-introducao {
@@ -20,52 +16,81 @@
     gap: 2rem;
 }
 
-/* MAPA CONTEÚDO */
-.conteudo-mapa {
+.conteudo-introducao p {
+    font-size: 1.2rem;
+}
+
+/* BLOCOS DE CONTEUDO */
+.conteudo-bloco {
     margin: 0 8rem 4rem 8rem;
     gap: 4rem;
 }
 
-.mapa {
+.bloco-img {
     width: 50%;
 }
 
-.mapa-destino {
+.bloco-bordas {
     box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-    flex-direction: column;
-    width: 50%;
+    width: 100%;
     padding: 2rem;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 4rem;
+    font-size: 1.2rem;
 }
 
-.destino-atrativos img {
-    width: 3rem;
+#atrativo-1, #atrativo-2 {
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
 }
+
 
 /* ATRAÇÕES CONTEÚDO */
 .conteudo-atrativos {
-    background: #C33424;
+    background: var(--cor-destaque);
     flex-direction: column;
-    margin: 0 8rem 4rem 8rem;
+    margin: 2rem 8rem 4rem 8rem;
     padding: 2rem;
+    gap: 2rem;
 }
 
 .atrativos-bloco {
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.atrativos-bloco a{
+.atrativos-bloco button{
     display: flex;
     flex-direction: column;
-    color: black;
+    font-size: 1.2rem;
     text-decoration: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
-/*TEMRINAR DE EDITAR DEPOIS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
+.descricao-atrativo {
+    display: none;
+    align-items: center;
+    color: var(--cor-fundo);
+}
 
+#descricao-texto, #descricao-titulo {
+    padding-bottom: 1rem;
+}
 
+#links-destinos {
+    gap: 2rem;
+}
 
+#links-destinos a {
+    border: 2px solid var(--cor-fundo);
+    background-color: var(--cor-fundo);
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    color: var(--cor-texto);
+}
 
 
 /*CONTEUDO DESTINOS - CONFIGURAÇÕES*/
@@ -78,7 +103,7 @@
 /* DESTINOS GALERIA */
 .destino-galeria {
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -87,6 +112,7 @@
     border-radius: 14px;
     float: left;
     width: 30%;
+    margin-bottom: 2rem;
     min-height: auto;
     position: relative;
     overflow: hidden;
@@ -111,26 +137,128 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    background: #FFFFFF;
+    background: var(--cor-fundo);
     padding: 1rem;
     text-align: center;
     font-size: 1.2rem;
 }
 
 .nav-destino {
-    color: black;
+    color: var(--cor-texto);
     letter-spacing: 0.2rem;
     padding-bottom: 0.2rem;
     cursor: pointer;
 }
 
 .nav-destino:hover {
-    color: #C33424;
-    border-bottom: 0.2rem solid #C33424;
+    color: var(--cor-destaque);
+    border-bottom: 0.2rem solid var(--cor-destaque);
 }
 
-.nav-destino:active {
-    color: #C33424;
+.nav-destino.selecionado {
+    color: var(--cor-destaque);
     font-weight: bold;
-    border-bottom: 0.2rem solid #C33424;
+    border-bottom: 0.2rem solid var(--cor-destaque);
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+
+/* RESPONSIVIDADE */
+/* TELA DE DESTINOS*/
+@media (max-width: 900px) {
+    .bloco-bordas {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    #conteudo-bloco-2 .bloco-bordas {
+        flex-direction: column-reverse;
+    }
+
+    .bloco-img {
+        width: 70%;
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    /*TELA INICIAL*/
+    .imagens-cabecalho {
+        height: 400px;
+    }
+
+    .conteudo-introducao {
+        margin: 0 4rem;
+        gap: 1rem;
+    }
+
+    #map {
+        height: 250px;
+    }
+
+    .conteudo-bloco, .conteudo-atrativos {
+        margin: 2rem 4rem;
+    }
+
+    .conteudo-destino {
+        margin: 0 4rem;
+    }
+
+    .atrativos-bloco img {
+        width: 70%;
+    }
+
+    #links-destinos {
+        flex-wrap: wrap;
+    }
+
+    .galeria-quadro {
+        width: 45%;
+    }
+
+    .conteudo-bloco {
+        margin: 2rem 4rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    /*TELA INICIAL*/
+    .imagens-cabecalho {
+        height: 300px;
+    }
+
+    .conteudo-introducao {
+        margin: 0 1rem;
+        gap: 1rem;
+    }
+
+    .conteudo-paragrafo {
+        margin-bottom: 0;
+    }
+
+    .conteudo-bloco, .conteudo-atrativos {
+        margin: 2rem 1rem;
+    }
+
+    .menu-navegacao {
+        flex-wrap: wrap;
+    }
+
+    .conteudo-destino {
+        margin: 0 1rem;
+    }
+
+    .galeria-quadro {
+        width: 100%;
+    }
+
+    /*TELA DE DESTINO*/
+    .bloco-img {
+        width: 100%;
+    }
 }

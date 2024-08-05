@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title id="destino-nome"> </title>
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="../../css/home.css">
+        <script defer src="../../destino.js"></script>
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <nav class="cabecalho-menu centralizar">
+                <a class="menu-iniciar centralizar" href="../../index.html"><img src="../../assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
+
+                <ul class="menu-navegacao">
+                    <li><a class="menu-page" href="../../index.html#destinos">DESTINOS</a></li>
+                    <li><a class="menu-page" href="../../index.html#atracoes">ATRAÇÕES</a></li>
+                    <li><a class="menu-page" href="../../paginas/favoritos.html">FAVORITOS</a></li>
+                </ul>
+
+                <div class="menu-botoes centralizar">
+                    <a id="pesquisa-botao" class="menu-botao centralizar"> <img src="../../assets/icons/icon-pesquisa.svg"> BUSCAR </a>
+                    <a class="menu-botao centralizar" href="../../paginas/usuario/login.html"> <img src="../../assets/icons/icon-perfil.svg"> ENTRAR </a>
+                </div>
+            </nav>
+        </header>
+
+        <div id="pesquisa-aba" class="cabecalho-pesquisa centralizar esconder">
+            <form id="pesquisa-form">
+                <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
+                <button class="pesquisa-botao"> <img src="../../assets/icons/icon-pesquisa.svg"> </button>
+            </form>
+        </div>
+
+        <main>
+            <div id="destino-fundo" class="imagens-cabecalho centralizar">
+                <!-- IMAGEM MUDA DINAMICAMENTE -->
+            </div>
+
+            <div class="conteudo-introducao centralizar" id="pagina-titulo">
+                <h1 id="destino-titulo">DESTINO TITULO</h1>
+                <p id="destino-descricao">DESTINO DESCRIÇÃO</p>
+            </div>
+
+            <div class="conteudo-bloco centralizar" id="conteudo-bloco-1">
+                <div class="bloco-bordas centralizar">
+                    <img class="bloco-img">
+                    <div class="centralizar" id="atrativo-1">
+                        <!-- INFORMAÇÕES APRESENTADAS DINAMICAMENTE -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="conteudo-bloco centralizar" id="conteudo-bloco-2">
+                <div class="bloco-bordas centralizar">
+                    <div class="centralizar" id="atrativo-2">
+                        <!-- INFORMAÇÕES APRESENTADAS DINAMICAMENTE -->
+                    </div>
+                    <img class="bloco-img">
+                </div>
+
+            </div>
+        </main>
+
+        <script src="../../js/busca.js"></script>
+    </body>
+</html>

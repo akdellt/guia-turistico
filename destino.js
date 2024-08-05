@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        // Obtém o ID do destino a partir da URL (exemplo: ?id=1)
+        // CAPTURA ID PERA URL
         const urlParams = new URLSearchParams(window.location.search);
         const destinoId = urlParams.get('id');
 
@@ -17,45 +17,53 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error('Destino não encontrado');
         }
 
-        // Atualizar a imagem de fundo
+        // ATUALIZA IMAGEM DE FUNDO
         const fundo = document.getElementById('destino-fundo');
         fundo.style.backgroundImage = `url('../../assets/destinos/header/${destino.foto}')`;
 
-        // Preencher título da página
+        // INSERE INFORMAÇÕES INICIAIS DO DESTINO
         document.getElementById('destino-nome').textContent = destino.nome;
         document.getElementById('destino-titulo').textContent = destino.titulo;
         document.getElementById('destino-descricao').textContent = destino.descricao;
 
-        // Limpa e preenche o conteúdo do primeiro e segundo mapa
-        const conteudoMapa1 = document.getElementById('atrativo-1');
-        const conteudoMapa2 = document.getElementById('atrativo-2');
+        // INSERE INFORMAÇÕES DOS ATRATICOS
+        const atrativoInfo1 = document.getElementById('atrativo-1');
+        const atrativoInfo2 = document.getElementById('atrativo-2');
 
+        // VERIFICA SE TEM ATRATIVOS
         if (destino.atrativos.length > 0) {
             const atrativo1 = destino.atrativos[0];
-            conteudoMapa1.innerHTML = `
+            let dicasHtml1 = atrativo1.dicas.map(dica => `<p><strong>Dica:</strong> ${dica}</p>`).join('');
+            atrativoInfo1.innerHTML = `
                 <h2 class="destino-titulo">${atrativo1.nome}</h2>
-                <div class="destino-atrativos">
-                    <span class="atrativos-icon">${atrativo1.tipo}</span>
-                </div>
                 <p>${atrativo1.descricao}</p>
-                <p><strong>Dicas:</strong> ${atrativo1.dicas}</p>
+                ${dicasHtml1}
             `;
+
+            // ATUALIZA IMAGEM DO ATRATIVO
+            const imagemAtrativo1 = document.querySelector('#conteudo-bloco-1 .bloco-img');
+            imagemAtrativo1.src = `../../assets/atracoes/preview/${atrativo1.foto}`;
+            imagemAtrativo1.alt = `Imagem de ${atrativo1.nome}`;
         }
 
         if (destino.atrativos.length > 1) {
             const atrativo2 = destino.atrativos[1];
-            conteudoMapa2.innerHTML = `
+            let dicasHtml2 = atrativo2.dicas.map(dica => `<p><strong>Dica:</strong> ${dica}</p>`).join('');
+            atrativoInfo2.innerHTML = `
                 <h2 class="destino-titulo">${atrativo2.nome}</h2>
-                <div class="destino-atrativos">
-                    <span class="atrativos-icon">${atrativo2.tipo}</span>
-                </div>
                 <p>${atrativo2.descricao}</p>
-                <p><strong>Dicas:</strong> ${atrativo2.dicas}</p>
+                ${dicasHtml2}
             `;
+
+            // ATUALIZA IMAGEM DO SEGUNDO ATRATIVO
+            const imagemAtrativo2 = document.querySelector('#conteudo-bloco-2 .bloco-img');
+            imagemAtrativo2.src = `../../assets/atracoes/preview/${atrativo2.foto}`;
+            imagemAtrativo2.alt = `Imagem de ${atrativo2.nome}`;
         } else {
-            // Remove o segundo conteúdo do mapa se não houver o segundo atrativo
-            document.getElementById('conteudo-mapa-2').remove();
+            // REMOVE CONTEÚDO DO SEGUNDO ATRATIVO SE NÃO EXISTIR
+            document.getElementById('conteudo-bloco-2').remove();
         }
+
     } catch (error) {
         console.error('Erro ao carregar destino:', error);
     }

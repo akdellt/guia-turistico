@@ -7,15 +7,8 @@
         <title>MaraTour</title>
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/home.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-        <style>
-            #map {
-                width: 100%;
-                height: 500px; /* Defina a altura desejada para o mapa */
-            }
-        </style>
-
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     </head>
 
     <body>
@@ -24,9 +17,9 @@
                 <a class="menu-iniciar centralizar" href="./index.html"><img src="./assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
 
                 <ul class="menu-navegacao">
-                    <li><a class="menu-page" href="./paginas/destinos/destinos.html">DESTINOS</a></li>
+                    <li><a class="menu-page" href="#destinos">DESTINOS</a></li>
                     <li><a class="menu-page" href="#atracoes">ATRAÇÕES</a></li>
-                    <li><a class="menu-page" href="./paginas/favoritos.html">FAVORITOS</a></li>
+                    <li><a class="menu-page" href="./paginas/usuario/favoritos.html">FAVORITOS</a></li>
                 </ul>
 
                 <div class="menu-botoes centralizar">
@@ -37,7 +30,7 @@
         </header>
 
         <div id="pesquisa-aba" class="cabecalho-pesquisa centralizar esconder">
-            <form action="">
+            <form id="pesquisa-form">
                 <input class="pesquisa-texto" type="text" placeholder="Buscar destino ou atrativo">
                 <button class="pesquisa-botao"> <img src="./assets/icons/icon-pesquisa.svg"> </button>
             </form>
@@ -45,46 +38,36 @@
 
         <main>
             <div class="imagens-cabecalho centralizar" >
-                <h2> FAZER DEPOIS ISSO AQUI </h2>
-                <!---->
+                <!-- IMAGEM MUDA DINAMICAMENTE -->
             </div>
-
 
             <div class="conteudo-introducao centralizar">
                 <h1 class="conteudo-titulo"> Conheça as maravilhas do Maranhão </h1>
 
-                <p class="conteudo-paragrafo"> Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Casamentiss faiz malandris se pirulitá. Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. </p>
+                <p class="conteudo-paragrafo"> O Maranhão, localizado na região Nordeste do Brasil, é um estado de impressionante diversidade natural e cultural. Repleto de paisagens exuberantes, o estado abriga a Chapada das Mesas e o Parque Nacional dos Lençóis Maranhenses, que com vastas dunas e lagoas de água cristalina criam um cenário surreal e único. Com sua mistura de belezas naturais, patrimônio histórico e cultura viva, o Maranhão é um destino inesquecível para quem deseja explorar a essência do Nordeste brasileiro.</p>
             </div>
 
-
-            <section class="conteudo-mapa centralizar">
-                <div id="map"></div>
-                <div class="mapa-destino centralizar">
-                    <img class="destino-previa" src="./assets/destinos/cidade.png" alt="imagem do destino">
-                    <h2 class="destino-titulo"> Destino escolhido </h2>
-                    <div class="destino-atrativos">
-                        <a class="atrativos-icon" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/arquitetura.svg"></a>
-                        <a class="atrativos-icon" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/agua.svg" ></a>
-                        <a class="atrativos-icon" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/festival.svg"></a>
-                        <a class="atrativos-icon" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/comida.svg"></a>
-                        <a class="atrativos-icon" href="./atracoes-atrativo.html"> <img src="./assets/atracoes/icons/natureza.svg"></a>
-                    </div>
-                    <p class=""> Mussum Ipsum, cacilds vidis litro abertis.  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per. Per aumento de cachacis, eu reclamis. Casamentiss faiz malandris se pirulitá. </p>
-                </div>
+            <section class="conteudo-bloco centralizar">
+                <div id="map" class="bloco-bordas centralizar"></div>
             </section>
 
-            <div class="conteudo-atrativos centralizar">
-                <h1 class="bloco-titulo" id="atracoes"> ATRAÇÕES </h1>
+            <h1 class="bloco-titulo centralizar" id="atracoes"> ATRAÇÕES </h1>
+            <div class="conteudo-atrativos centralizar" >
                 <div class="atrativos-bloco centralizar">
-                    <a class="centralizar" href="#"> <img src="./assets/atracoes/icons/arquitetura-nc.svg"> ARQUITETURA </a>
-                    <a class="centralizar" href="#"> <img src="./assets/atracoes/icons/agua-nc.svg"> PRAIAS </a>
-                    <a class="centralizar" href="#"> <img src="./assets/atracoes/icons/festival-nc.svg"> CULTURA </a>
-                    <a class="centralizar" href="#"> <img src="./assets/atracoes/icons/comida-nc.svg"> CULINÁRIA </a>
-                    <a class="centralizar" href="#"> <img src="./assets/atracoes/icons/natureza-nc.svg"> NATUREZA </a>
+                    <button class="centralizar" data-atrativo="Arquitetura"> <img src="./assets/atracoes/icons/arquitetura-nc.svg"> </button>
+                    <button class="centralizar" data-atrativo="Praias"> <img src="./assets/atracoes/icons/agua-nc.svg"> </button>
+                    <button class="centralizar" data-atrativo="Natureza"> <img src="./assets/atracoes/icons/natureza-nc.svg"> </button>
+                </div>
+
+                <div id="descricao-atrativo" class="descricao-atrativo centralizar">
+                    <h2 id="descricao-titulo" class="centralizar"></h2>
+                    <p id="descricao-texto" class="centralizar"></p>
+                    <div id="links-destinos" class="centralizar"></div>
                 </div>
             </div>
 
-            <div class="conteudo-destino centralizar">
+
+            <div id="destinos" class="conteudo-destino centralizar">
                 <h1 class="centralizar"> DESTINOS </h1>
 
                 <div class="destino-opcoes centralizar">
@@ -98,16 +81,15 @@
                 </div>
 
                 <div id="destinos-galeria" class="destino-galeria centralizar">
-                    <!-- Destinos serão adicionados aqui dinamicamente -->
+                    <!-- DESTINOS APRESENTADOS DINAMICAMENTE -->
                 </div>
             </div>
 
         </main>
 
-        <footer class="rodape">
-
-        </footer>
     <script src="./js/dinamicos.js"></script>
-    </body>
+    <script src="./js/busca.js"></script>
+    <script src="./js/mapa.js"></script>
 
+    </body>
 </html>

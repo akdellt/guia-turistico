@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar - MaraTour</title>
-    <link rel="stylesheet" href="../../css/global.css">
-    <link rel="stylesheet" href="../../css/login.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrar - MaraTour</title>
+        <link rel="stylesheet" href="../../css/global.css">
+        <link rel="stylesheet" href="../../css/login.css">
+    </head>
 
-<body>
-<header class="cabecalho">
-    <nav class="cabecalho-menu centralizar">
-        <a class="menu-iniciar centralizar" href="../../index.html"><img src="../../assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
+    <body>
+        <header class="cabecalho">
+            <nav class="cabecalho-menu centralizar">
+                <a class="menu-iniciar centralizar" href="../../index.html"><img src="../../assets/icons/maranhao-logo.svg" alt="bandeira do Maranhão"> MARATOUR</a>
 
-        <div class="menu-botoes centralizar">
-            <a class="menu-botao centralizar"> <img src="../../assets/icons/icon-perfil.svg"> REGISTRAR </a>
-        </div>
-    </nav>
-</header>
+                <div class="menu-botoes centralizar">
+                    <a class="menu-botao centralizar"> <img src="../../assets/icons/icon-perfil.svg"> REGISTRAR </a>
+                </div>
+            </nav>
+        </header>
 
-<main>
-    <form class="login-box centralizar" id="registrar-form">
-        <div class="formulario-box">
-            <div><label>NOME</label></div>
-            <input type="text" name="nome" id="nome" placeholder="nome">
-            <p class="erro" id="nome-obrigatorio" style="display: none;">Nome obrigatório</p>
-        </div>
+        <main>
+            <form class="login-box centralizar" id="registrar-form">
+                <div class="formulario-box">
+                    <div><label>NOME</label></div>
+                    <input type="text" name="nome" id="nome" placeholder="nome">
+                    <p class="erro" id="nome-obrigatorio" style="display: none;">Nome obrigatório</p>
+                </div>
 
-        <div class="formulario-box">
-            <div><label>SOBRENOME</label></div>
-            <input type="text" name="sobrenome" id="sobrenome" placeholder="sobrenome">
-            <p class="erro" id="sobrenome-obrigatorio" style="display: none;">Sobrenome obrigatório</p>
-        </div>
+                <div class="formulario-box">
+                    <div><label>SOBRENOME</label></div>
+                    <input type="text" name="sobrenome" id="sobrenome" placeholder="sobrenome">
+                    <p class="erro" id="sobrenome-obrigatorio" style="display: none;">Sobrenome obrigatório</p>
+                </div>
 
-        <div class="formulario-box">
-            <div><label>EMAIL</label></div>
-            <input type="email" name="email" id="email" placeholder="seu@email.com">
-            <p class="erro" id="email-obrigatorio" style="display: none;">Email obrigatório</p>
-            <p class="erro" id="email-invalido" style="display: none;">Email inválido</p>
-        </div>
+                <div class="formulario-box">
+                    <div><label>EMAIL</label></div>
+                    <input type="email" name="email" id="email" placeholder="seu@email.com">
+                    <p class="erro" id="email-obrigatorio" style="display: none;">Email obrigatório</p>
+                    <p class="erro" id="email-invalido" style="display: none;">Email inválido</p>
+                </div>
 
-        <div class="formulario-box">
-            <div><label>SENHA</label></div>
-            <input type="password" name="senha" id="senha" placeholder="senha">
-            <p class="erro" id="senha-obrigatoria" style="display: none;">Senha obrigatória</p>
-            <p class="erro" id="senha-minima" style="display: none;">Senha deve ter no mínimo 6 caracteres</p>
-        </div>
+                <div class="formulario-box">
+                    <div><label>SENHA</label></div>
+                    <input type="password" name="senha" id="senha" placeholder="senha">
+                    <p class="erro" id="senha-obrigatoria" style="display: none;">Senha obrigatória</p>
+                    <p class="erro" id="senha-minima" style="display: none;">Senha deve ter no mínimo 6 caracteres</p>
+                </div>
 
-        <div class="formulario-box">
-            <div><label>CONFIRMAR SENHA</label></div>
-            <input type="password" name="confirmarSenha" id="confirmar-senha" placeholder="confirmar senha">
-            <p class="erro" id="senha-igual" style="display: none;">Senha e confirmar senha devem ser iguais</p>
-        </div>
+                <div class="formulario-box">
+                    <div><label>CONFIRMAR SENHA</label></div>
+                    <input type="password" name="confirmarSenha" id="confirmar-senha" placeholder="confirmar senha">
+                    <p class="erro" id="senha-igual" style="display: none;">Senha e confirmar senha devem ser iguais</p>
+                </div>
 
-        <div class="login-botoes centralizar margin">
-            <button type="submit" class="login" id="botao-registrar">REGISTRAR</button>
-        </div>
-    </form>
-</main>
-<script src="../../js/validations.js"></script>
-<script src="../../js/registrar.js"></script>
-<script src="../../js/carregamento.js"></script>
-</body>
+                <div class="login-botoes centralizar margin">
+                    <button type="submit" class="login" id="registrar-button">REGISTRAR</button>
+                </div>
+            </form>
+        </main>
+
+        <script src="../../js/validations.js"></script>
+        <script src="../../js/registrar.js"></script>
+        <script src="../../js/carregamento.js"></script>
+
+    </body>
 </html>
