@@ -4,25 +4,25 @@
     "nome": "São Luís",
     "regiao": "Norte",
     "principal": true,
-    "titulo": "Conheça a cidade dos azulejos",
-    "descricao": "Capital do Maranhão e conhecida como Atenas Brasileira ou Ilha do Amor.",
+    "titulo": "O Coração do Maranhão",
+    "descricao": "São Luís, a capital do Maranhão, é famosa por seu centro histórico com arquitetura colonial bem preservada e rica em influências africanas e portuguesas. Conhecida como a \"Ilha do Reggae\", a cidade encanta com sua vibrante cena cultural e festivais tradicionais. Além disso, suas praias exuberantes e o calor humano fazem dela um destino imperdível no nordeste do Brasil.",
     "foto": "sao-luis.jpg",
-    "latitude": -2.5307,
+    "latitude": -2.53073,
     "longitude": -44.3068,
     "atrativos": [
       {
         "nome": "Centro Histórico",
-        "tipo": "Monumentos",
-        "descricao": "Patrimônio Histórico do estado.",
-        "dicas": "Evitar épocas festivas para visitar com menos pessoas.",
-        "foto": ""
+        "tipo": "Arquitetura",
+        "descricao": "Declarado Patrimônio Mundial, o Centro Histórico de São Luís preserva a rica herança arquitetônica da cidade com seus icônicos azulejos portugueses e ruas de paralelepípedos. Nesta área tombada, é possível explorar o elegante Palácio dos Leões, o Teatro Arthur Azevedo, a imponente Catedral de São Luís e uma série de casarões históricos, que juntos oferecem uma imersão na história e na cultura vibrante da cidade.",
+        "dicas": ["O melhor jeito de explorar o Centro Histórico é a pé, então vista roupas confortáveis e prepare-se para caminhar pelas ruas e escadarias do bairro.", "Em tempos festivos, como Natal e São João, as ruas e praças do centro ganham vida com decorações vibrantes e eventos, oferecendo um cenário encantador e rica programação cultural."],
+        "foto": "centro-historico.jpg"
       },
       {
-        "nome": "Peninsula",
+        "nome": "Litorânea",
         "tipo": "Praias",
-        "descricao": "Peninsula ludovicense, com as praias mais visitadas da cidade, como Ponta D'Areia, Litorânea e Araçagy",
-        "dicas": "É possível visitar o Espigão e ver o por do sol.",
-        "foto": ""
+        "descricao": "A Litorânea é a área costeira acompanhada pela Avenida Litorânea onde há uma rica variedade de praias, cada uma oferecendo um charme único. A Praia de São Marcos é conhecida por suas ondas fortes e infraestrutura completa, perfeita para esportes aquáticos e lazer. A Praia do Calhau combina águas calmas e quentes com uma animada cena de quiosques e bares, ideal para relaxar e socializar. A Praia do Meio, com seu ambiente vibrante e proximidade do centro da cidade, é popular entre os moradores e turistas. Com extensas faixas de areia e uma atmosfera acolhedora, o litoral ludovicense oferece uma experiência de praia diversificada e prazerosa para todos os visitantes.",
+        "dicas": ["Mais ao oeste da Litorânea também há a praia da Ponta D'Areia, que é geralmente visitada para observar o por do sol no Espigão Costeiro"],
+        "foto": "litoranea.jpg"
       }
     ]
   },
@@ -32,17 +32,17 @@
     "regiao": "Norte",
     "principal": false,
     "titulo": "Raposa e seus manguezais",
-    "descricao": "Cidade ligada à São Luís conhecida pelos mangues e passeios de barco.",
+    "descricao": "Raposa, situada na ilha de Upaon Açu, é um paraíso de beleza natural rodeada por manguezais e áreas de preservação, oferecendo cenários encantadores para quem ama a natureza. As praias e rios da região criam um ambiente perfeito para observação de aves e vida marinha, proporcionando aos visitantes um contato direto com o ecossistema local.",
     "foto": "raposa.jpg",
-    "latitude": -2.4255,
-    "longitude": -44.1075,
+    "latitude": -2.43105,
+    "longitude": -44.078,
     "atrativos": [
       {
-        "nome": "Praia de carimã",
+        "nome": "Fronhas maranhenses",
         "tipo": "Praias",
-        "descricao": "Passeio de barco.",
-        "dicas": "Reserve com antecedência.",
-        "foto": ""
+        "descricao": "Passeio de barco com destino as dunas da praia de Carimã, passando pelos manguezais da Raposa e o criatório de ostras, onde é possível provar os frutos do mar frescos aproveitando a paisagem natural.",
+        "dicas": ["Reserve com antecedência o passeio e prepare comida para levar durante o trajeto de barco."],
+        "foto": "fronhas.jpg"
       }
     ]
   },
@@ -51,18 +51,18 @@
     "nome": "Alcântara",
     "regiao": "Norte",
     "principal": false,
-    "titulo": "Alcântara,a cidade parada no tempo",
-    "descricao": "bla blabla bla bla bla.",
+    "titulo": "A cidade parada no tempo",
+    "descricao": "Formada por ruínas do período colonial português no estado e tombada pelo IPHAN como Patrimônio Nacional, Alcântara é um tesouro arquitetônico, com suas ruas de paralelepípedos e imponentes igrejas e casarões coloniais. O Convento do Carmo e a Igreja de São Matias preservam a atmosfera encantadora do passado, oferecendo uma visão única da história e da arquitetura do Maranhão",
     "foto": "alcantara.jpg",
-    "latitude": -2.4039,
-    "longitude": -44.4153,
+    "latitude": -2.39763,
+    "longitude": -44.4045,
     "atrativos": [
       {
-        "nome": "Base espacial sla",
-        "tipo": "Monumentos",
-        "descricao": "Passeio pela cidade.",
-        "dicas": "nao sei.",
-        "foto": ""
+        "nome": "Centro Histórico de Alcântara",
+        "tipo": "Arquitetura",
+        "descricao": "Com suas ruas de paralelepípedos e uma impressionante coleção de edificações históricas, destacam-se a Igreja de São Matias, com sua arquitetura barroca, e o Convento do Carmo, famoso por suas ruínas e detalhes ornamentais. O local é marcado por casarões antigos com fachadas detalhadas e azulejos portugueses, que oferecem uma imersão na rica história da cidade. Caminhar pelas suas ruas é como viajar no tempo, com cada esquina revelando a grandiosidade do passado colonial e a beleza preservada da arquitetura.",
+        "dicas": ["Para chegar à cidade é preciso ir de embarcação, então é recomendado estar no cais da Praia Grande entre 5h30 e 11h para aproveitar a maré alta.", "O percurso do centro é formado por pedrarias e ladeiras, então vista roupas e calçados confortáveis."],
+        "foto": "centro-alcantara.jpg"
       }
     ]
   },
@@ -72,17 +72,24 @@
     "regiao": "Nordeste",
     "principal": true,
     "titulo": "Paraíso no Maranhão",
-    "descricao": "Ponto mais conhecido do estado.",
+    "descricao": "Barreirinhas é a principal porta de entrada para os deslumbrantes Lençóis Maranhenses, um dos mais impressionantes parques nacionais do Brasil. Com uma charmosa infraestrutura e proximidade de aventuras naturais, a cidade proporciona uma base ideal para explorar o vasto deserto de areia e suas paisagens surreais.",
     "foto": "barreirinhas.jpg",
-    "latitude": -2.7587,
-    "longitude": -42.8231,
+    "latitude": -2.74938,
+    "longitude": -42.8328,
     "atrativos": [
       {
         "nome": "Lençóis Maranhenses",
         "tipo": "Praias",
-        "descricao": "Passeio pelas dunas.",
-        "dicas": "É possível ir para os lençóis por Barreirinhas ou Santo Amaro.",
-        "foto": ""
+        "descricao": "Os Lençóis Maranhenses são um dos maiores tesouros naturais do Brasil, um vasto deserto de dunas de areia branca que se estende até onde a vista alcança. Localizado no Maranhão, este parque nacional é conhecido por suas lagoas sazonais, que se formam durante a estação das chuvas e oferecem um contraste espetacular com o deserto de areia. Durante esse período, as lagoas de água doce, como a Lagoa Azul e a Lagoa Bonita, se tornam verdadeiros oásis, perfeitos para um banho refrescante e para apreciar paisagens deslumbrantes.",
+        "dicas": ["A melhor época para visitar os lençóis é entre junho e setembro, quando as lagoas estão cheias."],
+        "foto": "lencois-maranhenses.jpg"
+      },
+      {
+        "nome": "Rio Preguiças",
+        "tipo": "Praias",
+        "descricao": "Passeio de barco pelo percurso do rio, onde é possível ver pequenos vilarejos ribeirinhos, como Vassouras e Mandacaru, onde se pode vivenciar a cultura local e experimentar a culinária típica. Um destaque do passeio é o Farol de Mandacaru, que oferece uma vista panorâmica deslumbrante dos Lençóis Maranhenses e da confluência do rio com o deserto de dunas. O Rio Preguiças é um convite ao relaxamento, proporcionando um ambiente tranquilo e pitoresco, ideal para observar a flora e fauna locais, além de ser um excelente ponto para fotos e contemplação da beleza natural da região.",
+        "dicas": ["Leve roupas reservas para se trocar depois dos banhos."],
+        "foto": "rio-preguicas.jpg"
       }
     ]
   },
@@ -91,18 +98,18 @@
     "nome": "Morros",
     "regiao": "Nordeste",
     "principal": false,
-    "titulo": "A natureza de Morros",
-    "descricao": "Destino favorito dos maranhenses para as férias.",
+    "titulo": "Beleza natural e serenidade",
+    "descricao": "Destino favorito dos maranhenses para as férias, Morros destaca-se por suas paisagens naturais exuberantes, com extensas áreas de vegetação nativa e rios cristalinos. A cidade é rodeada por áreas de mata atlântica e oferece cachoeiras e pequenas corredeiras que proporcionam um ambiente tranquilo e refrescante. Suas trilhas e áreas de preservação são perfeitas para ecoturismo, permitindo aos visitantes explorar a rica flora e fauna da região em um cenário de grande beleza e tranquilidade",
     "foto": "morros.jpg",
-    "latitude": -2.9438,
-    "longitude": -44.0383,
+    "latitude": -2.853790,
+    "longitude":  -44.035700,
     "atrativos": [
       {
-        "nome": "sla",
+        "nome": "Rio Una",
         "tipo": "Natureza",
-        "descricao": "Cachoeiras e lagoas.",
-        "dicas": "nao sei.",
-        "foto": ""
+        "descricao": "Rio que passa pela cidade de Morros, onde os banhistas aproveitam o ambiente calmo para relaxar e mergulhar.",
+        "dicas": ["Situado a apenas 100km da capital, é comum fazerem passeios bate e volta pra região."],
+        "foto": "rio-una.jpg"
       }
     ]
   },
@@ -111,18 +118,25 @@
     "nome": "Carolina",
     "regiao": "Sul",
     "principal": true,
-    "titulo": "Carolina e a chapada",
-    "descricao": "Cidade sei a o que sei la o que la.",
+    "titulo": "A joia da Chapada das Mesas",
+    "descricao": "Fronteira do Maranhão com Tocantins, Carolina abriga o Parque Nacional da Chapada das Mesas, conhecido por suas formações rochosas únicas, como mesas e cânions. A região encanta também com cachoeiras, rios cristalinos e vegetação rica, oferecendo paisagens espetaculares e oportunidades para ecoturismo e aventuras ao ar livre. É um destino perfeito para quem busca explorar a beleza natural e a serenidade do interior maranhense.",
     "foto": "carolina.jpg",
-    "latitude": -7.335,
-    "longitude": -47.4694,
+    "latitude": -7.33779,
+    "longitude": -47.4679,
     "atrativos": [
       {
         "nome": "Chapada das Mesas",
         "tipo": "Natureza",
-        "descricao": "Formações naturais do estado.",
-        "dicas": "adicionar.",
-        "foto": ""
+        "descricao": "A Chapada das Mesas, no Maranhão, é famosa por suas impressionantes formações geológicas, que incluem mesas planas e chapadas, moldadas ao longo de milhões de anos por processos naturais. Entre as formações mais notáveis estão as \"Pedras de Xapuri\" e o \"Portal da Chapada\", uma formação rochosa que forma um arco natural espetacular. As mesas e chapadas criam um terreno acidentado e cativante, proporcionando vistas panorâmicas deslumbrantes e um ambiente único para explorar.",
+        "dicas": ["Localizada na região oposta da capital, o recomendado é ir para a cidade de Imperatriz e então seguir para Carolina.", "Visita às atrações a partir de R$10,00."],
+        "foto": "chapada-das-mesas.jpg"
+      },
+      {
+        "nome": "Pedra Caída",
+        "tipo": "Natureza",
+        "descricao": "o Complexo da Pedra Caída é um destino indispensável para aqueles que buscam uma experiência completa com a natureza da Chapada. No local é possível visitar diversas cachoeiras, cavernas, aproveitar a vista pelo teleférico ou se arriscar na tirolesa.",
+        "dicas": ["Visita às atrações a partir de R$35,00.", "Os meses entre junho e setembro são os melhores para visitar a região da chapada pelo clima mais seco e sem chuvas."],
+        "foto": "pedra-caida.jpg"
       }
     ]
   },
@@ -131,18 +145,25 @@
     "nome": "Riachão",
     "regiao": "Sul",
     "principal": false,
-    "titulo": "Riachão e suas cachoeiras",
-    "descricao": "hihihi hoho hahahahah huuuu.",
+    "titulo": "O paraíso das águas",
+    "descricao": "Riachão é um verdadeiro paraíso natural, situado na Chapada das Mesas, com uma impressionante variedade de paisagens naturais. A região é rica em águas cristalinas, com rios e córregos que criam piscinas naturais perfeitas para um mergulho refrescante. As cachoeiras, como a Cachoeira do Santuário e a Cachoeira do Piriá, são rodeadas por uma vegetação vibrante de cerrado e matas ciliares, tornando Riachão um destino ideal para quem busca explorar a beleza intocada da natureza.",
     "foto": "riachao.jpg",
-    "latitude": -7.3581,
-    "longitude": -46.6161,
+    "latitude": -7.36012,
+    "longitude": -46.6146,
     "atrativos": [
       {
-        "nome": "Cachoeira de sei la o que",
+        "nome": "Poço Azul",
         "tipo": "Natureza",
-        "descricao": "Quedas d'água fenomenais.",
-        "dicas": "uauauauauauau.",
-        "foto": ""
+        "descricao": "Este poço de água doce é famoso por sua tonalidade azul intensa, causada pela pureza das águas e pela reflexão do céu. O ambiente ao redor é cercado por vegetação nativa e formações rochosas, criando um cenário paradisíaco e tranquilo. O Poço Azul é ideal para nadar e relaxar, oferecendo uma experiência refrescante e uma oportunidade para apreciar a beleza natural da região. Além disso, é um excelente local para fotos e contemplação, destacando-se como um dos principais atrativos naturais de Riachão.",
+        "dicas": ["Entrada paga."],
+        "foto": "poco-azul.jpg"
+      },
+      {
+        "nome": "Encanto Azul",
+        "tipo": "Natureza",
+        "descricao": "Outra joia natural de Riachão que se destaca pela sua impressionante lagoa de águas transparentes e de uma cor azul-turquesa intensa.",
+        "dicas": ["Entrada paga."],
+        "foto": "encanto-azul.jpg"
       }
     ]
   }

@@ -6,12 +6,9 @@
     --cor-destaque: #C33424;
     --cor-botao: #24247A;
     --cor-hover: ;
-
     --fonte-principal: "Roboto", sans-serif;
 }
 
-
-/* BODY -- CONFIGURAÇÕES GERAIS*/
 * {
     margin: 0;
     padding: 0;
@@ -19,11 +16,15 @@
 
 body {
     height: 100vh;
-    width: auto;
     box-sizing: border-box;
     font-family: var(--fonte-principal);
-
     color: var(--cor-texto);
+}
+
+
+/* CLASSES UTILITÁRIAS */
+a {
+    text-decoration: none;
 }
 
 .centralizar {
@@ -32,16 +33,27 @@ body {
     align-items: center;
 }
 
+.esconder {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
 
-/* HEADER PRINCIPAL -- CONFIGURAÇÕES GERAIS*/
+/* CONFIGURAÇÃO GERAL DO CABEÇALHO */
 .cabecalho {
     height: 30px;
     padding: 1rem;
-    background: white;
-    border-bottom: 0.1rem solid #C33424;
+    background: var(--cor-fundo);
+    border-bottom: 0.1rem solid var(--cor-destaque);
 }
 
+
+/* CONFIGURAÇÕES DA BARRA DE MENU */
 .cabecalho-menu {
     display: flex;
     justify-content: space-between;
@@ -53,16 +65,14 @@ body {
 }
 
 .menu-botoes {
-    border-left: 0.1rem solid black;
+    border-left: 0.1rem solid var(--cor-texto);
     padding-left: 1rem;
     gap: 1rem;
 }
 
-
-/* HEADER PRINCIPAL -- CONFIGURAÇÕES DO BOTÃO INICIAL*/
 .menu-iniciar {
     gap: 1rem;
-    color: black;
+    color: var(--cor-texto);
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 0.2rem;
@@ -72,10 +82,8 @@ body {
     width: 2rem;
 }
 
-
-/* HEADER PRINCIPAL -- CONFIGURAÇÕES DO MENU DE PÁGINAS*/
 .menu-page {
-    color: black;
+    color: var(--cor-texto);
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 0.2rem;
@@ -83,15 +91,13 @@ body {
 }
 
 .menu-page:hover {
-    color: #C33424;
-    border-bottom: 0.2rem solid #C33424;
+    color: var(--cor-destaque);
+    border-bottom: 0.2rem solid var(--cor-destaque);
 }
 
-
-/* HEADER PRINCIPAL -- CONFIGURAÇÕES DOS BOTÕES DO MENU*/
 .menu-botao {
     display: flex;
-    color: black;
+    color: var(--cor-texto);
     text-decoration: none;
     flex-direction: column;
     font-size: 0.8rem;
@@ -99,17 +105,17 @@ body {
 }
 
 .menu-botao:hover {
-    filter: invert(33%) sepia(24%) saturate(5588%) hue-rotate(344deg) brightness(78%) contrast(95%);}
+    filter: invert(33%) sepia(24%) saturate(5588%) hue-rotate(344deg) brightness(78%) contrast(95%);
+}
 
 .menu-botao img {
     width: 1.5rem;
 }
 
 
-
-/* DIV PESQUISA -- CONFIGURAÇÕES DA ABA DE PESQUISA*/
+/* CONFIGURAÇÕES DA ABA DE PESQUISA */
 .cabecalho-pesquisa {
-    background: #C33424;
+    background: var(--cor-destaque);
     padding: 1rem;
 }
 
@@ -122,11 +128,10 @@ body {
 .pesquisa-botao {
     height: 100%;
     width: auto;
-    padding: 0 0.5rem ;
+    padding: 0 0.5rem;
     position: absolute;
     right: 0;
-
-    background: white;
+    background: var(--cor-fundo);
     border: none;
     border-radius: 0 28px 28px 0;
     cursor: pointer;
@@ -134,10 +139,6 @@ body {
 
 .pesquisa-texto {
     width: 100%;
-    width: -moz-available;
-    width: -webkit-fill-available;
-    width: fill-available;
-
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 28px;
@@ -146,25 +147,21 @@ body {
 }
 
 .pesquisa-texto:focus {
-    outline: 0.15rem solid #24247A;
+    outline: 0.15rem solid var(--cor-botao);
     color: var(--cor-destaque);
 }
 
-
-
-/* CONFIGURAÇÕES DE TAGS */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* RECURSIVIDADE */
+/* TABLET */
+@media (max-width: 768px) {
+    .menu-navegacao {
+        display: none;
+    }
 }
 
-/* FOOTER - CONFIGURAÇÕES GERAIS */
-.rodape {
-    background: #24247A;
-    height: 10px;
-}
-
-.esconder {
-    display: none;
+/* CELULAR */
+@media (max-width: 480px) {
+    .menu-botoes {
+        border-left: none;
+    }
 }

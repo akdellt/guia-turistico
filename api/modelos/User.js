@@ -1,3 +1,4 @@
+// MDOELO DO USUÁRIO NO BANCO DE DADOS
 const mongoose = require("mongoose");
 
 const User = mongoose.model("User", {
