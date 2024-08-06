@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
                 if (destinoEncontrado) {
                     const baseURL = window.location.origin;
-                    window.location.href = `${baseURL}/front-end/paginas/destinos/destino.html?id=${destinoEncontrado.id}`;
+                    window.location.href = `${baseURL}/paginas/destinos/destino.html?id=${destinoEncontrado.id}`;
                 } else {
                     alert('Destino não encontrado!');
                 }
