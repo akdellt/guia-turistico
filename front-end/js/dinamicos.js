@@ -1,7 +1,7 @@
 // FILTRAR DESTINOS POR REGIÃO
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('../../dados/destinos.json');
+        const response = await fetch('./dados/destinos.json');
         const destinos = await response.json();
 
         const regioesLista = document.getElementById('regioes-lista');
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // MOSTRA BOTÕES DOS DESTINOS
                 destinosFiltrados.forEach(destino => {
                     const link = document.createElement('a');
-                    link.href = `./paginas/destinos/destino.html?id=${destino.id}`;
+                    link.href = `../front-end/paginas/destinos/destino.html?id=${destino.id}`;
                     link.textContent = destino.nome;
                     linksDestinos.appendChild(link);
                 });

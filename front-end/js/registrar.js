@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const registrar = document.getElementById('registrar-button');
-    registrar.addEventListener('click', () => {
-        window.location.href = '../../paginas/usuario/registrar.html';
-    });
-
     // VARIAVEIS
     const form = {
         nome: document.getElementById('nome'),
@@ -27,11 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
         // APAGA ERROS
         document.querySelectorAll('.erro').forEach(e => e.style.display = 'none');
 
-        const nome = form.nome.value;
-        const sobrenome = form.sobrenome.value;
-        const email = form.email.value;
-        const senha = form.senha.value;
-        const confirmarSenha = form.confirmarSenha.value;
+        const nome = form.nome.value.trim();
+        const sobrenome = form.sobrenome.value.trim();
+        const email = form.email.value.trim();
+        const senha = form.senha.value.trim();
+        const confirmarSenha = form.confirmarSenha.value.trim();
 
         // VALIDAÇÃO
         let hasError = false;
@@ -64,9 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (hasError) return;
 
+        showLoading();
+
         // ENVIA PARA API
         try {
-            const response = await fetch('http://localhost:3000/auth/register', {
+            const response = await fetch('https://guia-turistico-cdp3.onrender.com/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -75,14 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             const data = await response.json();
+            console.log(data); // Adicione esta linha para ver a resposta completa da API
+
             if (response.ok) {
-                showLoading();
-                window.location.href = '../../index.html';
+                window.location.href = '../../login.html';
             } else {
                 alert(data.msg || 'Erro ao registrar usuário');
             }
         } catch (error) {
             alert('Erro ao se conectar com a API');
+        } finally {
+            hideLoading();
         }
     });
 });

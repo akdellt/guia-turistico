@@ -9,3 +9,8 @@ function showLoading() {
 
     document.body.appendChild(div);
 }
+
+function hideLoading() {
+    const loading = document.querySelector('.loading');
+    loading.remove();
+}

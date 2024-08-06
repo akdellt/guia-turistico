@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // CARREGAR DESTINOS DO JSON
     async function carregarDestinos() {
         try {
-            const response = await fetch('../../dados/destinos.json');
+            const response = await fetch('./dados/destinos.json');
             destinos = await response.json();
 
             const pesquisaTexto = document.querySelector('.pesquisa-texto');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
                 if (destinoEncontrado) {
                     const baseURL = window.location.origin;
-                    window.location.href = `${baseURL}/paginas/destinos/destino.html?id=${destinoEncontrado.id}`;
+                    window.location.href = `${baseURL}/front-end/paginas/destinos/destino.html?id=${destinoEncontrado.id}`;
                 } else {
                     alert('Destino não encontrado!');
                 }

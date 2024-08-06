@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('../../dados/destinos.json');
+        const response = await fetch('./dados/destinos.json');
         const destinos = await response.json();
 
         // CONFIGURAÇÃO INICIAL DO MAPA
